@@ -59,6 +59,16 @@ This section aims to explain about the current progress that we have successfull
   - Extract and stored information related to the VM connection in ```config.json```.
   - Solved the issue of reading/writing the content in a synchronous manner. 
   - Worked on setting up the enviornment for the build.yaml
+
+
+### Future - Work to be done 👥	
+
+  - Complete the setup block in ```build.yml``` to include sql setup and maven commands
+  - Design the ```build.yml``` to include commands to build iTrust in the virtual machine
+  - Store the required secrets in the ```.env``` file.
+  - Update project boards accordingly
+  - Take a screencast of the implementation
+  - Update the project report
    
 
 ## Contributors
