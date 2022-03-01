@@ -2,9 +2,10 @@ setup:
   - sudo apt-get update -y
   - sudo apt-get install default-jre 
   - sudo apt-get install default-jdk 
-  - sudo apt-get install git -y
+  - sudo apt-get install git wget -y
   - rm -rf itrust
-  - git clone https://github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git itrust
+  - wget https://github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git -P itrust
+
 
 jobs:
   - name: build-itrust
