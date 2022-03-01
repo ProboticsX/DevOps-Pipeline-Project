@@ -14,5 +14,4 @@ exports.handler = async argv => {
     const { processor } = argv;
     console.log(chalk.green("Preparing computing environment..."));
     await builder.buildAndProvisionVM();
-   
 };

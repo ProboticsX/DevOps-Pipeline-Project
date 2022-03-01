@@ -1,0 +1,15 @@
+setup: 
+  - sudo apt-get update -y
+  - sudo apt-get install default-jre 
+  - sudo apt-get install default-jdk 
+  - sudo apt-get install git -y
+  - rm -rf itrust
+  - git clone https://github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git itrust
+
+jobs:
+  - name: build-itrust
+    steps: 
+      - name: cmd name
+        run: [CMD]
+      - name: step name
+        run: cd iTrust2 && mvn --batch-mode --update-snapshots clean test
