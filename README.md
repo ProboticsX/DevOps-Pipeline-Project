@@ -61,7 +61,7 @@ This section aims to explain about the current progress that we have successfull
   - Worked on setting up the enviornment for the build.yaml
 
 
-### Future - Work to be done 👥	
+### Future - Work to be done 🕛
 
   - Complete the setup block in ```build.yml``` to include sql setup and maven commands
   - Design the ```build.yml``` to include commands to build iTrust in the virtual machine
