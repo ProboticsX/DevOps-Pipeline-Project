@@ -60,6 +60,10 @@ This section aims to explain about the current progress that we have successfull
   - Solved the issue of reading/writing the content in a synchronous manner. 
   - Worked on setting up the enviornment for the build.yaml
 
+### Project board 🗒️
+
+ <img width="900" alt="image" src="https://media.github.ncsu.edu/user/22460/files/22d6adee-487f-44c8-a8df-0fc93cd38ff3">
+
 
 ### Future - Work to be done 🕛
 
