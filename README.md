@@ -10,11 +10,13 @@ This section aims to explain about the current progress that we have successfull
 
 - After cloning the Pipeline-Template repo, we decided to complete ```pipeline init``` part first. So, we provisioned VM named ```pipeline``` 💻 (using bakerx command). Please note that we also did setup ```npm``` inside our project repo as well.
 
+<img width="680" alt="image" src="https://media.github.ncsu.edu/user/24819/files/500feaaf-b4c3-47ed-a697-cd6a2c31f247">
+
+
 ![image](https://media.github.ncsu.edu/user/22719/files/9de3f823-ccc2-4a7b-8ec2-9c72725f252c)
 
 - After running the ```pipeline```, we stored the configuration settings of the VM like ```"Host","HostName","Port"``` inside ```lib\config.json```.
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<            SS REQUIRED           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 - We also made some progress ⬆️ on ```pipeline build``` by configuring ```commands\build.yml``` by installing some of the dependencies required for running ```iTrust``` (still in progress) inside VM such as:
   
@@ -24,9 +26,29 @@ This section aims to explain about the current progress that we have successfull
   - sudo apt-get install default-jre -y
   - sudo apt-get install default-jdk -y
   - sudo apt-get install git wget -y
-  - sudo apt-get install mysql=8.0.28 -y
+  - sudo apt-get install mysql-server -y
   - rm -rf itrust
   - wget https://github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git -P itrust
   ```
+  
+  <img width="551" alt="image" src="https://media.github.ncsu.edu/user/24819/files/2635c049-0156-4208-936c-4a44e8c4f5b0">
+
 
 ### What challenges we had and what we learned from them 😎
+
+- Synchronous execution of ```bakerx``` commands
+  - Intially while executing the commands ```bakerx pull focal cloud-images.ubuntu.com``` and then ```bakerx run pipeline focal --ip 192.168.56.10``` ,the later command was not waiting for the previous one to be completely executed.
+  - Hence, we ran both the commands using ```childprocess.execSync()``` function.
+ 
+- Working with ```config.json```
+  - After storing the ```pipeline``` configurations inside ```config.json```, we were not able to read from the file properly since writing/reading content synchronously.
+  - We learnt that we can solve this issue by using ```js-yaml```.
+
+- Issue with ```js-yaml```
+  - Intially we were encountering this error, which we tried to solve using ```sudo apt-get install js-yaml``` but were unsucessful.
+  
+  <img width="566" alt="image" src="https://media.github.ncsu.edu/user/24819/files/a54fca21-ad1b-46fa-b061-94803d4d13fd">
+  
+  - We solved this error by installing the latest version of ```js-yaml``` using ```npm i "js-yaml"@latest```
+
+
