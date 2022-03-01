@@ -52,16 +52,12 @@ This section aims to explain about the current progress that we have successfull
   - We solved this error by installing the latest version of ```js-yaml``` using ```npm i "js-yaml"@latest```
 
 
-### Task of Team Members 👥	
+### Team Contributions 👥	
 
-- **Shubham Shubham:**
+  - Created the VM using ```bakerx``` and ```ubuntu focal image```
+  - Faced challenged in working with synchronous execution of ```bakerx``` commands and solve the issue.
   - Extract and stored information related to the VM connection in ```config.json```.
   - Solved the issue of reading/writing the content in a synchronous manner. 
-  
-  - **Jay Shah**
-   - Created the VM using ```bakerx``` and ```ubuntu focal image```
-   - Faced challenged in working with synchronous execution of ```bakerx``` commands and solve the issue.
-  
-  - **Neha Kotcherlakota**
-    - 
+  - Worked on setting up the enviornment for the build.yaml
+   
 
