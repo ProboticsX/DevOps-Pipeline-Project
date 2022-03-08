@@ -5,8 +5,7 @@ setup:
   - sudo apt-get install git wget -y
   - sudo apt-get install mysql-server -y 
   - sudo apt-get install maven -y
-  - rm -rf itrust
-  - wget https://github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git -P itrust
+  - git clone https://github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git -P itrust
 
 jobs:
   - name: build-itrust
