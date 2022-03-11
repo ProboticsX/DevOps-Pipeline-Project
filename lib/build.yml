@@ -1,28 +1,90 @@
 ---
+
 - hosts: all
-  gather_facts: yes
+  gather_facts: no
   become: yes
-  vars:
-    NODEJS_VERSION: "8"
-    ansible_distribution_release: "xenial" #trusty
   tasks:
-  
   - name: ping all hosts
     ping:
-  
-  - name: Install the gpg key for nodejs LTS
-    apt_key:
-      url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
-      state: present
+    tags: iTrust-build
 
-
-  - name: Install the nodejs LTS repos
-    apt_repository:
-      repo: "deb https://deb.nodesource.com/node_{{ NODEJS_VERSION }}.x {{ ansible_distribution_release }} main"
-      state: present
-      update_cache: yes
-
-  - name: Install the nodejs
+  - name: Ansible apt-get to update
+    become: yes
     apt:
-      name: nodejs
+      update_cache: true
+    tags: iTrust-build
+
+  - name: Install nodejs
+    become: yes
+    apt:
+      pkg: nodejs
       state: present
+    tags: iTrust-build
+
+  - name: Install wget
+    become: yes
+    apt:
+      pkg: wget
+      state: present
+    tags: iTrust-build
+
+  - name: Install git
+    become: yes
+    apt:
+      pkg: git
+      state: present
+    tags: iTrust-build
+
+  - name: Install maven
+    become: yes
+    apt:
+      pkg: maven
+      state: present
+    tags: iTrust-build
+
+  - name: Install openjdk-11-jdk
+    become: yes
+    apt:
+      pkg: openjdk-11-jdk
+      state: present
+    tags: iTrust-build
+
+  - name: Get pysql
+    become: yes
+    apt:
+      pkg: python3-pymysql
+      state: present
+    tags: iTrust-build
+
+  - name: Install mysql-server
+    become: yes
+    apt:
+      pkg: mysql-server
+      state: present
+    tags: iTrust-build
+
+  - name: copy .my.cnf file with mysql root password credentials
+    become: yes
+    template: src=my.cnf.j2 dest=/root/.my.cnf owner=root mode=0600
+    tags: iTrust-build
+
+  - name: Change the authentication plugin of MySQL root user to mysql_native_password
+    become: yes
+    shell: mysql -u root -e 'UPDATE mysql.user SET plugin="mysql_native_password" WHERE user="root" AND host="localhost"'
+    tags: iTrust-build
+
+  - name: Flush Privileges
+    become: yes
+    shell: mysql -u root -e 'FLUSH PRIVILEGES'
+    tags: iTrust-build
+
+  - name: Set MySQL root password
+    mysql_user:
+      login_host: 'localhost'
+      login_user: 'root'
+      login_password: ''
+      name: 'root'
+      password: '{{mysql_pass}}'
+      state: present
+    tags: iTrust-build
+
