@@ -4,6 +4,11 @@
 This section aims to explain about the current progress that we have successfully completed after continuing from the CHECKPOINT-M1.md
 
 - We started with the setup of ***ansible*** 
+- We created two VMs to setup **ansible**
+- Used github access token for cloning the iTrust
+- We set up mySQL password for iTrust
+- Downloaded all the required dependencies for iTrust
+- Ran the ansible playbook to build iTrust and successfully ran all the test cases.
 
 ![image](https://media.github.ncsu.edu/user/22719/files/1f51240f-978a-44f4-9719-344c29b04638)
 
