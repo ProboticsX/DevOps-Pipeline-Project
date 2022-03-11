@@ -3,67 +3,51 @@
 ### What progress we have made ✅
 This section aims to explain about the current progress that we have successfully completed after continuing from the CHECKPOINT-M1.md
 
-- We started with the setup of ***ansible*** 
-- We created two VMs to setup **ansible**
-- Used github access token for cloning the iTrust
-- We set up mySQL password for iTrust
-- Downloaded all the required dependencies for iTrust
-- Ran the ansible playbook to build iTrust and successfully ran all the test cases.
+- We decided to use ansible for further task, as it would be make our job easier for the future too.
+- To run ansible, we created two VMs named **ansible** and **pipeline**. ansible is used as host VM and pipeline is used to run the build.
+- In ```pipeline.init``` we create the VMs using the  ```bakerx``` comnand. 
 
-![image](https://media.github.ncsu.edu/user/22719/files/1f51240f-978a-44f4-9719-344c29b04638)
+ <img width="958" alt="image" src="https://media.github.ncsu.edu/user/24819/files/1230cad0-4e93-4089-9df7-7f2ac9048ec2">
 
-
-- After cloning the Pipeline-Template repo, we decided to complete ```pipeline init``` part first. So, we provisioned VM named ```pipeline``` 💻 (using bakerx command). Please note that we also did setup ```npm``` inside our project repo as well.
-
-<img width="680" alt="image" src="https://media.github.ncsu.edu/user/24819/files/500feaaf-b4c3-47ed-a697-cd6a2c31f247">
-
-
-![image](https://media.github.ncsu.edu/user/22719/files/9de3f823-ccc2-4a7b-8ec2-9c72725f252c)
-
-- After running the ```pipeline```, we stored the configuration settings of the VM like ```"Host","HostName","Port"``` inside ```lib\config.json```.
-
-
-- We also made some progress ⬆️ on ```pipeline build``` by configuring ```commands\build.yml``` by installing some of the dependencies required for running ```iTrust``` (still in progress) inside VM such as:
-  
+- We set up the keys for the VMs so that the communication between the VMs is seemless.
+- We then, run the ansible install commands 
   ```
-  setup: 
-  - sudo apt-get update -y
-  - sudo apt-get install default-jre -y
-  - sudo apt-get install default-jdk -y
-  - sudo apt-get install git wget -y
-  - sudo apt-get install mysql-server -y
-  - rm -rf itrust
-  - wget https://github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git -P itrust
+  - sudo add-apt-repository ppa:ansible/ansible
+  - sudo apt-get update
+  - sudo apt-get install ansible -y
   ```
+  ![Screenshot (74)](https://media.github.ncsu.edu/user/24819/files/f6a78518-959d-4b6a-b89c-d00af2f8469f)
+
   
-  <img width="551" alt="image" src="https://media.github.ncsu.edu/user/24819/files/2635c049-0156-4208-936c-4a44e8c4f5b0">
+- After the ansible installation, we run the ansible playbook named **build.yml**
+-  In the build.yml file, the dependencies required for iTrust are downloaded
+-  The following dependencies are downloaded
+   ```
+   - Node.js
+   - wget
+   - git
+   - maven
+   - jdk 11
+   - mysql
+   - mvn
+   ```
+   ![Screenshot (76)](https://media.github.ncsu.edu/user/24819/files/ce35eb1b-60a3-412c-ac5e-bf3622f8f33c)
+
+-  To clone iTrust from github, github access tokens is used
+-  Also the password required for mySQL is taken from the ```.env``` file
+-  Then finally to build iTrust and all run all test, the following command is used 
+
+![image](https://media.github.ncsu.edu/user/24819/files/5109908e-142f-43d3-b980-2e2473a163cd)
+
 
 
 ### What challenges we had and what we learned from them 😎
 
-- Synchronous execution of ```bakerx``` commands
-  - Intially while executing the commands ```bakerx pull focal cloud-images.ubuntu.com``` and then ```bakerx run pipeline focal --ip 192.168.56.10``` ,the later command was not waiting for the previous one to be completely executed.
-  - Hence, we ran both the commands using ```childprocess.execSync()``` function.
  
-- Working with ```config.json```
-  - After storing the ```pipeline``` configurations inside ```config.json```, we were not able to read from the file properly since writing/reading content synchronously.
-  - We learnt that we can solve this issue by using ```js-yaml```.
-
-- Issue with ```js-yaml```
-  - Intially we were encountering this error, which we tried to solve using ```sudo apt-get install js-yaml``` but were unsucessful.
-  
-  <img width="566" alt="image" src="https://media.github.ncsu.edu/user/24819/files/a54fca21-ad1b-46fa-b061-94803d4d13fd">
-  
-  - We solved this error by installing the latest version of ```js-yaml``` using ```npm i "js-yaml"@latest```
 
 
 ### Team Contributions 👥	
 
-  - Created the VM using ```bakerx``` and ```ubuntu focal image```
-  - Faced challenged in working with synchronous execution of ```bakerx``` commands and solve the issue.
-  - Extract and stored information related to the VM connection in ```config.json```.
-  - Solved the issue of reading/writing the content in a synchronous manner. 
-  - Worked on setting up the enviornment for the build.yaml
 
 ### Project board 🗒️
 
