@@ -12,5 +12,5 @@ exports.builder = yargs => {
 exports.handler = async argv => {
     const { job_name, build_yaml } = argv;
     console.log(chalk.green(job_name, build_yaml));
-    //await builder.buildAndProvisionVM();
+    await builder.runBuild(job_name, build_yaml);
 };
