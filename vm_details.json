@@ -1,8 +1,0 @@
-{
-    "web_server_static_ip" :"192.168.56.100",
-    "web_server_name" :"pipeline",
-    "cfg_server_static_ip" :"192.168.56.10",
-    "cfg_server_name" :"ansible"
-    }
-    
-    
