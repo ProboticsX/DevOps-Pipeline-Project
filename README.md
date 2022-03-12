@@ -48,8 +48,6 @@ This section aims to explain about the current progress that we have successfull
 
 ### What challenges we had and what we learned from them 😎
 
-### What challenges we had and what we learned from them 😎
-
 - Running Ansible in Windows
   - Ansible is available for Windows, but only as a client, we wanted to run ansible as a host, so to overcome this challenge we created two VMs and used one VM as a host ```ansible``` and the other VM as web server ```pipeline```
 
