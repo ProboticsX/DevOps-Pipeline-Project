@@ -90,3 +90,8 @@ This section aims to explain about the current progress that we have successfull
     <td align="center"><a href="https://github.ncsu.edu/sshubha"><img src="https://avatars.github.ncsu.edu/u/22719" width="75px;" alt=""/><br /><sub><b>Shubham Shubham</b></sub></a><br /></td>
   </tr>
 </table>
+
+## NOTE:
+For Windows, please change line 58 in ```lib/builder.js``` to 
+```let command = `ssh -q -i  "~/.bakerx/insecure_private_key" -p 2003 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null vagrant@127.0.0.1 "ansible-playbook ${build_yaml} --tags "${job_name}" -i ${process.env.bakerx_path} -e "gituser=${process.env.gituser}" -e "buildyamlpath=${build_yaml}" -e "gitpass=${process.env.gitpass}" -e "url=${process.env.url}" -e "destdir=${process.env.destdir}" -e "mysql_pass=${process.env.mysql_pass}""`;
+```
