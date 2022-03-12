@@ -40,6 +40,11 @@ This section aims to explain about the current progress that we have successfull
 ![image](https://media.github.ncsu.edu/user/24819/files/5109908e-142f-43d3-b980-2e2473a163cd)
 
 
+### Screencast - 
+
+  - Pipeline Init Execution - https://youtu.be/LLWRUUfh6JY
+  - Pipeline Build Execution - https://youtu.be/eAd2orIS3I0
+
 
 ### What challenges we had and what we learned from them 😎
 
@@ -60,16 +65,6 @@ This section aims to explain about the current progress that we have successfull
 
  <img width="1439" alt="Screenshot 2022-03-11 at 7 55 09 PM" src="https://media.github.ncsu.edu/user/22460/files/7c7f18f1-539f-4c50-9e61-5eac5a2b5e2c">
 
-
-### Future - Work to be done 🕛
-
-  - Complete the setup block in ```build.yml``` to include sql setup and maven commands
-  - Design the ```build.yml``` to include commands to build iTrust in the virtual machine
-  - Store the required secrets in the ```.env``` file.
-  - Update project boards accordingly
-  - Take a screencast of the implementation
-  - Update the project report
-   
 
 ## Contributors
 
