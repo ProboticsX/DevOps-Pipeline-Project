@@ -48,10 +48,17 @@ This section aims to explain about the current progress that we have successfull
 
 ### Team Contributions 👥	
 
+  - We started with the setup of ansible
+  - We created two VMs to setup ansible
+  - Used github access token for cloning the iTrust
+  - We set up mySQL password for iTrust
+  - Downloaded all the required dependencies for iTrust
+  - Ran the ansible playbook to build iTrust and successfully ran all the test cases.
+
 
 ### Project board 🗒️
 
- <img width="900" alt="image" src="https://media.github.ncsu.edu/user/22460/files/22d6adee-487f-44c8-a8df-0fc93cd38ff3">
+ <img width="1439" alt="Screenshot 2022-03-11 at 7 55 09 PM" src="https://media.github.ncsu.edu/user/22460/files/7c7f18f1-539f-4c50-9e61-5eac5a2b5e2c">
 
 
 ### Future - Work to be done 🕛
