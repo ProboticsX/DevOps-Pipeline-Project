@@ -87,4 +87,43 @@
       password: '{{mysql_pass}}'
       state: present
     tags: iTrust-build
+  
+  - name: Get iTrust
+    git:
+      repo: 'https://{{gituser}}:{{gitpass}}@{{url}}'
+      dest: "{{ destdir }}"
+    tags: iTrust-build
 
+  - name: Copy application template
+    command: cp {{destdir}}/iTrust2/src/main/resources/application.yml.template {{destdir}}/iTrust2/src/main/resources/application.yml
+    tags: iTrust-build
+
+  - name: Replace line in the file examples
+    become_user: root
+    ansible.builtin.lineinfile:
+      path: '{{destdir}}/iTrust2/src/main/resources/application.yml'
+      regexp: '^\s\s\s\spassword:'
+      line: '    password: {{mysql_pass}}'
+      backup: yes
+    tags: iTrust-build
+
+  - name: install mvn
+    command: sudo mvn clean install
+    register: out
+    args:
+      chdir: '{{destdir}}/iTrust2'
+      executable: /bin/bash
+    tags: iTrust-build
+
+  - debug: msg="{{ out }}"
+    tags: iTrust-build
+
+  - name: run mvn
+    shell: sudo mvn --batch-mode --update-snapshots clean test
+    register: stdout
+    args:
+      chdir: '{{destdir}}/iTrust2'
+    tags: iTrust-build
+
+  - debug: msg="{{ stdout }}" 
+    tags: iTrust-build
