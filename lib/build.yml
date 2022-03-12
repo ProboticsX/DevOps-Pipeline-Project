@@ -127,3 +127,12 @@
 
   - debug: msg="{{ stdout }}" 
     tags: iTrust-build
+
+  - name: Reset sql password
+    shell: mysql -u root -p{{ mysql_pass }} -e "SET PASSWORD FOR 'root'@'localhost' = ''"
+    tags: iTrust-build
+
+  - name: Flush Privileges
+    become: yes
+    shell: mysql -u root -e 'FLUSH PRIVILEGES'
+    tags: iTrust-build
