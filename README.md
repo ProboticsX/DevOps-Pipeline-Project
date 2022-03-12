@@ -35,15 +35,29 @@ This section aims to explain about the current progress that we have successfull
 
 -  To clone iTrust from github, github access tokens is used
 -  Also the password required for mySQL is taken from the ```.env``` file
--  Then finally to build iTrust and all run all test, the following command is used 
+-  Then finally to build iTrust and all run all test, the following command is used ```pipeline build iTrust-build /bakerx/lib/build.yml```
 
 ![image](https://media.github.ncsu.edu/user/24819/files/5109908e-142f-43d3-b980-2e2473a163cd)
 
 
-
 ### What challenges we had and what we learned from them 😎
 
- 
+- Running Ansible in Windows
+  - Ansible is available for Windows, but only as a client, we wanted to run ansible as a host, so to overcome this challenge we created two VMs and used one VM as a host ```ansible``` and the other VM as web server ```pipeline```
+
+- Cloning iTrust using Ansible
+  - The challenge faced here was in cloning the ```iTrust``` repo that required the user name and password to be specified while running the command which we neither wanted to disclose nor did we wanted to put in ```.env```
+  - Hence, we used the GitHub token to pass it as a password hence we were able to overcome this challenge.
+
+- Setting up password for SQL
+ - The major requirement for setting up iTrust is the installation of ```mysql``` which needs username and password to be passed from ```.env```. Finally, we were able to set the mysql password through ```my.cnf.j2``` plugin.
+
+```
+ - name: copy .my.cnf file with mysql root password credentials
+    become: yes
+    template: src=my.cnf.j2 dest=/root/.my.cnf owner=root mode=0600
+    tags: iTrust-build
+```
 
 
 ### Team Contributions 👥	
