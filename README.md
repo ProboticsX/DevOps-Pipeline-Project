@@ -40,7 +40,7 @@ This section aims to explain about the current progress that we have successfull
 ![image](https://media.github.ncsu.edu/user/24819/files/5109908e-142f-43d3-b980-2e2473a163cd)
 
 
-### Screencast - 
+### Screencast
 
   - Pipeline Init Execution - https://youtu.be/LLWRUUfh6JY
   - Pipeline Build Execution - https://youtu.be/eAd2orIS3I0
