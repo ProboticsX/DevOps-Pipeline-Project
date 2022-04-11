@@ -1,0 +1,7 @@
+{
+  "user": "vagrant",
+  "port": 2004,
+  "host": "pipeline-vm",
+  "hostname": "127.0.0.1",
+  "private_key": "C:\\Users\\Jay\\.bakerx\\insecure_private_key"
+}

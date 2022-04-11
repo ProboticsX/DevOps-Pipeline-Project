@@ -1,0 +1,51 @@
+setup: 
+  - sudo apt-get update -y
+  - sudo apt-get install git wget -y
+  - rm -rf iTrust2-v10
+  - rm -rf checkbox.io-micro-preview
+  - rm -rf screenshot
+  - sudo apt-get install -qq -y debconf-utils
+  - export DEBIAN_FRONTEND="noninteractive"  
+  - echo \"mysql-server mysql-server/root_password password passwd\" | sudo debconf-set-selections
+  - echo \"mysql-server mysql-server/root_password_again password passwd\" | sudo debconf-set-selections
+  # - sudo service mysql start 
+ 
+Variable:
+  - DEBIAN_FRONTEND="noninteractive"
+
+jobs:
+  - name: itrust-build
+    steps: 
+      - name: install JRE
+        run: sudo apt-get install default-jre -y
+      - name: install JDK
+        run: sudo apt-get install openjdk-11-jdk -y
+      - name: install Maven
+        run: sudo apt-get install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH 
+      - name: install nodejs
+        run: sudo apt install nodejs -y
+      - name: install npm
+        run: sudo apt install npm -y   
+      - name: install mysql
+        run: sudo apt-get install -y mysql-server         
+      - name: create application.yml file
+        run: cp iTrust2-v10/iTrust2/src/main/resources/application.yml.template iTrust2-v10/iTrust2/src/main/resources/application.yml
+      - name: set password in application.yml
+        run: sed -i 's/password\:/password\:\ passwd/g' iTrust2-v10/iTrust2/src/main/resources/application.yml
+      - name: test iTrust1
+        run: cd iTrust2-v10/iTrust2 && mvn --batch-mode --update-snapshots clean test
+  # - name: mutation-coverage
+  #   steps:
+  #     - name: clone microservice
+  #       run: git clone microServiceGitUrl
+  #     - name: clone Snapshot utility
+  #       run: git clone snapshotGitUrl
+  #     - name: setup snapshot
+  #       run: cd screenshot && npm i
+  #     # - name: install pm2
+  #     #   run: npm install pm2 -g
+  #     - name: run service
+  #       run: cd checkbox.io-micro-preview && npm install express &&  node index.js 
+  #     # - name: take screenshot of upload.md
+  #     #   run: mkdir originalSnaps && cd screenshot && node screenshot.js http://localhost:3000/survey/upload.md surveyScreenshot
+      
