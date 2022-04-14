@@ -4,10 +4,14 @@ setup:
   - rm -rf iTrust2-v10
   - rm -rf checkbox.io-micro-preview
   - rm -rf screenshot
+  - rm -rf originalSnaps
   - sudo apt-get install -qq -y debconf-utils
   - export DEBIAN_FRONTEND="noninteractive"  
   - echo \"mysql-server mysql-server/root_password password passwd\" | sudo debconf-set-selections
   - echo \"mysql-server mysql-server/root_password_again password passwd\" | sudo debconf-set-selections
+  - sudo apt-get install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH 
+  - sudo apt install nodejs -y
+  - sudo apt install npm -y   
   # - sudo service mysql start 
  
 Variable:
@@ -20,12 +24,12 @@ jobs:
         run: sudo apt-get install default-jre -y
       - name: install JDK
         run: sudo apt-get install openjdk-11-jdk -y
-      - name: install Maven
-        run: sudo apt-get install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH 
-      - name: install nodejs
-        run: sudo apt install nodejs -y
-      - name: install npm
-        run: sudo apt install npm -y   
+      #- name: install Maven
+        #run: sudo apt-get install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH 
+      #- name: install nodejs
+        #run: sudo apt install nodejs -y
+      #- name: install npm
+        #run: sudo apt install npm -y   
       - name: install mysql
         run: sudo apt-get install -y mysql-server         
       - name: create application.yml file
@@ -34,18 +38,38 @@ jobs:
         run: sed -i 's/password\:/password\:\ passwd/g' iTrust2-v10/iTrust2/src/main/resources/application.yml
       - name: test iTrust1
         run: cd iTrust2-v10/iTrust2 && mvn --batch-mode --update-snapshots clean test
-  # - name: mutation-coverage
-  #   steps:
-  #     - name: clone microservice
-  #       run: git clone microServiceGitUrl
-  #     - name: clone Snapshot utility
-  #       run: git clone snapshotGitUrl
-  #     - name: setup snapshot
-  #       run: cd screenshot && npm i
-  #     # - name: install pm2
-  #     #   run: npm install pm2 -g
-  #     - name: run service
-  #       run: cd checkbox.io-micro-preview && npm install express &&  node index.js 
-  #     # - name: take screenshot of upload.md
-  #     #   run: mkdir originalSnaps && cd screenshot && node screenshot.js http://localhost:3000/survey/upload.md surveyScreenshot
+  - name: mutation-coverage
+    steps:
+      - name: clone microservice
+        run: git clone microServiceGitUrl
+      - name: clone Snapshot utility
+        run: git clone snapshotGitUrl
+      - name: setup snapshot
+        run: cd screenshot && npm i && sudo npm link
+      - name: run service
+        run: cd checkbox.io-micro-preview && npm install express && sudo npm install -g forever && forever start index.js
+      - name: Install libraries for snapshot utility
+        run: sudo apt-get install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget -y
+      - name: take screenshot of upload.md
+        run: mkdir originalSnaps && cd originalSnaps && sudo apt-get install -y libgbm-dev && screenshot http://localhost:3000/survey/upload.md surveyScreenshot
+      - name: stop service
+        run: cd checkbox.io-micro-preview &&  forever stop index.js
+      #- name: mutate for 1000 iterations
+      #  run:  for i in {1..1}; do echo "Hi, $i"; echo "Hello, $i"; done
+      # - name: Copy files in bakerx folder
+      #   run: cp -rp /home/vagrant/checkbox.io-micro-preview/marqdown.js /bakerx/ 
+      - name: start iterations
+        run:  node /bakerx/mutate.js
+      - name: step 2
+        run: forever start checkbox.io-micro-preview/index.js 
+      - name: step 3
+        run: mkdir surveySnapshotTemp && cd surveySnapshotTemp
       
+      - name: step 4
+        run: screenshot http://localhost:3000/survey/upload.md surveyScreenshotTemp
+
+      - name: step 7
+        run: cd ..
+
+      - name: step 5
+        run: forever stop checkbox.io-micro-preview/index.js
