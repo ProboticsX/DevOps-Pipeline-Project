@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 const fs = require('fs');
 const yaml = require('js-yaml');
 const child_process = require("child_process");
@@ -43,6 +43,7 @@ class Setup{
     let snapshotGitUrl = `https://${token}@github.com/ruttabega/screenshot`
     command = command.replace('snapshotGitUrl', snapshotGitUrl);
 
+    command = command.replace("\r","");
     console.log('vm ssh :::',vm_ssh,':::',command);
         execSync(`${vm_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']});       
     }    
