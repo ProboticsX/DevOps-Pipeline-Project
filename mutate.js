@@ -5,7 +5,7 @@ const fs = require("fs");
 const chalk = require('chalk');
 
 let operations = [ConditionalBoundary,IncrementalMutations, NegateConditionals,
-                  ConditionalExpression,CloneReturn,EmptyString, ConstantReplace ]
+                  ConditionalExpression,CloneReturn,EmptyString, ConstantReplace,ControlFlow ]
 
 function rewrite( filepath, newPath ) {
 
@@ -62,6 +62,83 @@ function IncrementalMutations(ast){
 
     })
 }
+
+function ControlFlow(ast){
+    let candidates = 0;
+    traverseWithParents(ast, (node) => {
+        if (node.body)
+        {   
+            if(Array.isArray(node.body.body)){
+                var i;
+                for (i in node.body.body){
+                    next_i=parseInt(i)+1
+                    if (node.body.body[i].type === "IfStatement" )
+                    {
+                        var child_node=node.body.body[i]
+                        if (node.body.body[next_i] && node.body.body[next_i].type === "IfStatement"){
+                            while(child_node){
+                                if(child_node.alternate){
+                                    child_node=child_node.alternate
+                                }
+                                else{
+                                    break
+                                }
+                            }
+                        if (child_node.alternate == null)
+                            {candidates+=1  }                          
+                        }
+                    }
+                }            
+            }
+        }
+        
+    })
+    
+    var mutateTarget = getRandomInt(candidates)
+    mutateTarget =0
+    //console.log('Random Number: ',mutateTarget)
+    current=0
+    traverseWithParents(ast, (node) => {
+        if (node.body)
+        {   //child_node=node
+            if(Array.isArray(node.body.body)){
+                var i;
+                for (i in node.body.body){
+                    next_i=parseInt(i)+1
+                    if (node.body.body[i].type === "IfStatement" )
+                    {
+                        var child_node=node.body.body[i]
+                        if (node.body.body[next_i] && node.body.body[next_i].type === "IfStatement"){
+                            while(child_node){
+                                if(child_node.alternate){
+                                    child_node=child_node.alternate
+                                }
+                                else{
+                                    break
+                                }
+                            }
+                            if (child_node.alternate == null)
+                            {                                
+                            if (current == mutateTarget){
+                                child_node.alternate = node.body.body[next_i];
+                                node.body.body.splice(next_i,1);
+                                console.log("if to else if")
+                                console.log( chalk.red(`Replacing 'if' with 'else if' on line ${child_node.alternate.loc.start.line}`));
+                                //return 
+                            }
+                            current+=1  
+                            }
+
+                        }
+                    }
+                }            
+            }
+        }
+        
+    })
+    
+}
+
 
 
 

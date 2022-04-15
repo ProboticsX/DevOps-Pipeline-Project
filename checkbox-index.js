@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const marqdown = require('./marqdown');
+const marqdown = require('./marqdown-mod');
 
 const fs = require('fs');
 
