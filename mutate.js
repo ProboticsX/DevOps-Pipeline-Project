@@ -49,11 +49,13 @@ function IncrementalMutations(ast){
             if( current === mutateTarget ) {
                 if (node.prefix==true) {
                     node.prefix = false
+                    console.log("++j to j++")
                     console.log( chalk.red(`Replacing ++j with j++ on line ${node.loc.start.line}` ));
             
                 }
                 else {
                     node.operator = "--"
+                    console.log("i++ to i--")
                     console.log( chalk.red(`Replacing i++ with i-- on line ${node.loc.start.line}` ));
                 }
             }

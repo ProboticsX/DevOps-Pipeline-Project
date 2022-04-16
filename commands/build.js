@@ -71,6 +71,7 @@ class Setup{
           let command = job_cmds[i].run;            
           await this.sshIntoVM(command,processor);                
       }
+      
     }
 }
 
@@ -100,8 +101,11 @@ exports.handler = async argv => {
             return;
         }
 
-        let job_cmds = doc_json.jobs[index].steps;           
+        let job_cmds = doc_json.jobs[index].steps;  
+                 
         await new Setup().runSteps(job_cmds,processor);
+        await new Setup().sshIntoVM("cp /bakerx/final.sh . ",processor);
+        await new Setup().sshIntoVM("bash final.sh "+ doc_json.jobs[index].iterations,processor);
     } 
     catch (e) 
     {

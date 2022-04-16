@@ -1,0 +1,62 @@
+{
+  "10": {
+    "operator": "Constant-0",
+    "sourceLine": "Replacin 0 with 3 on line 377",
+    "result": "Changed",
+    "pixel diff": "487335"
+  },
+  "9": {
+    "operator": "&& to || ",
+    "sourceLine": "Replacing && with || on line 233",
+    "result": "Changed",
+    "pixel diff": "527000"
+  },
+  "8": {
+    "operator": "Clone Return",
+    "sourceLine": "Inserting return at line 374",
+    "result": "Changed",
+    "pixel diff": "487335"
+  },
+  "7": {
+    "operator": "> to >= ",
+    "sourceLine": "Replacing > with >= on line 294",
+    "result": "Not Changed",
+    "pixel diff": "0"
+  },
+  "6": {
+    "operator": "&& to || ",
+    "sourceLine": "Replacing && with || on line 183",
+    "result": "Exception",
+    "pixel diff": "0"
+  },
+  "5": {
+    "operator": "Clone Return",
+    "sourceLine": "Inserting return at line 374",
+    "result": "Changed",
+    "pixel diff": "487335"
+  },
+  "4": {
+    "operator": "Empty string",
+    "sourceLine": "Replacing Empty string with <div>Bug</div> on line 88",
+    "result": "Exception",
+    "pixel diff": "0"
+  },
+  "3": {
+    "operator": "Empty string",
+    "sourceLine": "Replacing Empty string with <div>Bug</div> on line 301",
+    "result": "Not Changed",
+    "pixel diff": "0"
+  },
+  "2": {
+    "operator": "if to else if",
+    "sourceLine": "Replacing 'if' with 'else if' on line 112",
+    "result": "Not Changed",
+    "pixel diff": "0"
+  },
+  "1": {
+    "operator": "Clone Return",
+    "sourceLine": "Inserting return at line 392",
+    "result": "Not Changed",
+    "pixel diff": "0"
+  }
+}

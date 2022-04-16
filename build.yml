@@ -12,6 +12,7 @@ setup:
   - sudo apt-get install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH 
   - sudo apt install nodejs -y
   - sudo apt install npm -y   
+  - sudo apt-get install -y nodejs jq npm imagemagick chromium-browser
   # - sudo service mysql start 
  
 Variable:
@@ -39,6 +40,7 @@ jobs:
       - name: test iTrust1
         run: cd iTrust2-v10/iTrust2 && mvn --batch-mode --update-snapshots clean test
   - name: mutation-coverage
+    iterations: 10
     steps:
       - name: clone microservice
         run: git clone microServiceGitUrl
@@ -56,21 +58,20 @@ jobs:
         run: mkdir originalSnaps && cd originalSnaps && sudo apt-get install -y libgbm-dev && screenshot http://localhost:3000/survey/long.md ori_long && screenshot http://localhost:3000/survey/survey.md ori_survey && screenshot http://localhost:3000/survey/upload.md ori_upload && screenshot http://localhost:3000/survey/variations.md ori_variations
       - name: stop service
         run: cd checkbox.io-micro-preview && forever stop index.js
-      #- name: mutate for 1000 iterations
-      #  run:  for i in {1..1}; do echo "Hi, $i"; echo "Hello, $i"; done
-     # - name: Copy files in shared folder
-      #  run: cp -rp /home/vagrant/checkbox.io-micro-preview/marqdown.js /bakerx/
       - name: copy mutate.js
         run: cp /bakerx/mutate.js /home/vagrant/checkbox.io-micro-preview/mutate.js
-     # - name: store mutated screenshots in the folders created 
-      #  run: mkdir mutated && cd mutated && mkdir upload_screenshot && mkdir long_screenshot && mkdir survey_screenshot && mkdir variations_screenshot
-      - name: Copy index.js
-        run: cp /bakerx/checkbox-index.js /home/vagrant/checkbox.io-micro-preview/checkbox-index.js
-      - name: start iterations
-        run:  for i in {1..2}; do echo "Iteration $i," ; cd checkbox.io-micro-preview; node mutate.js ; forever start checkbox-index.js ; sleep 3 ;
-              screenshot http://localhost:3000/survey/upload.md /home/vagrant/mutated/upload_screenshot/$i ; 
-              screenshot http://localhost:3000/survey/long.md /home/vagrant/mutated/long_screenshot/$i ;
-              screenshot http://localhost:3000/survey/survey.md /home/vagrant/mutated/survey_screenshot/$i ; 
-              screenshot http://localhost:3000/survey/variations.md /home/vagrant/mutated/variations_screenshot/$i ; 
-              forever stop 1 ; 
-              done 
+      - name: Clean structure
+        run: rm -rf /bakerx/mutated /home/vagrant/mutated
+      - name: store mutated screenshots in the folders created 
+        run: mkdir mutated && cd mutated && mkdir upload_screenshot && mkdir long_screenshot && mkdir survey_screenshot && mkdir variations_screenshot
+      - name: Replace index.js
+        run: cp /bakerx/checkbox-index.js /home/vagrant/checkbox.io-micro-preview/index.js
+     # - name: start iterations
+      
+      #  run:  for i in {1..2}; do echo "Iteration $i," ; cd checkbox.io-micro-preview; node mutate.js ; forever start checkbox-index.js ; sleep 3 ;
+       #       screenshot http://localhost:3000/survey/upload.md /home/vagrant/mutated/upload_screenshot/$i ; 
+        #      screenshot http://localhost:3000/survey/long.md /home/vagrant/mutated/long_screenshot/$i ;
+         #     screenshot http://localhost:3000/survey/survey.md /home/vagrant/mutated/survey_screenshot/$i ; 
+          #    screenshot http://localhost:3000/survey/variations.md /home/vagrant/mutated/variations_screenshot/$i ; 
+           #   forever stop checkbox-index.js ; cd ~ ;
+            #  done 
