@@ -1,9 +1,9 @@
 # README.md
 
 ### What progress we have made ✅
-This section aims to explain about the current progress that we have successfully completed after continuing from the CHECKPOINT-M1.md
+This section aims to explain about the current progress that we have successfully completed after continuing from the M1.md
 
-- We decided to use ansible for further task, as it would be make our job easier for the future too.
+- We have made changes to our project to utilise only one VM ```pipeline``` and dropped the idea of using ```ansible```
 - To run ansible, we created two VMs named **ansible** and **pipeline**. ansible is used as host VM and pipeline is used to run the build.
 - In ```pipeline.init``` we create the VMs using the  ```bakerx``` comnand. 
 
