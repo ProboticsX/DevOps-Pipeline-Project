@@ -1,44 +1,24 @@
-# README.md
+# README.md (Mutation Coverage)
 
 ### What progress we have made ✅
 This section aims to explain about the current progress that we have successfully completed after continuing from the M1.md
 
 - We have made changes to our project to utilise only one VM ```pipeline``` and dropped the idea of using ```ansible```
-- To run ansible, we created two VMs named **ansible** and **pipeline**. ansible is used as host VM and pipeline is used to run the build.
-- In ```pipeline.init``` we create the VMs using the  ```bakerx``` comnand. 
+- The provisioning and configuring of computing environment for ```pipeline``` was done successfully.
+- We performed the 1000 iterations using random mutation operators.
+- Triggering of build job ```pipeline build mutation-coverage build.yml``` was done successfully 
+- The result for each mutation involved details such as operator changed, pixel differences, line changed and the final result.
 
- <img width="958" alt="image" src="https://media.github.ncsu.edu/user/24819/files/1230cad0-4e93-4089-9df7-7f2ac9048ec2">
+The commands used for running the project are as follows:
 
-- We set up the keys for the VMs so that the communication between the VMs is seemless.
-- We then, run the ansible install commands 
-  ```
-  - sudo add-apt-repository ppa:ansible/ansible
-  - sudo apt-get update
-  - sudo apt-get install ansible -y
-  ```
-  ![Screenshot (74)](https://media.github.ncsu.edu/user/24819/files/f6a78518-959d-4b6a-b89c-d00af2f8469f)
+``` 
+pipeline init
+pipeline build mutation-coverage build.yml
+```
+ <-----------SS showing 1000 iterations were completed successfully---------------->
+ <-----------SS showing result.json---------------->
 
-  
-- After the ansible installation, we run the ansible playbook named **build.yml**
--  In the build.yml file, the dependencies required for iTrust are downloaded
--  The following dependencies are downloaded
-   ```
-   - Node.js
-   - wget
-   - git
-   - maven
-   - jdk 11
-   - mysql
-   - mvn
-   ```
-   ![Screenshot (76)](https://media.github.ncsu.edu/user/24819/files/ce35eb1b-60a3-412c-ac5e-bf3622f8f33c)
-
--  To clone iTrust from github, github access tokens is used
--  Also the password required for mySQL is taken from the ```.env``` file
--  Then finally to build iTrust and all run all test, the following command is used ```pipeline build iTrust-build /bakerx/lib/build.yml```
-
-![image](https://media.github.ncsu.edu/user/24819/files/5109908e-142f-43d3-b980-2e2473a163cd)
-
+***Note***: Make sure that you've set up the ```Git_Token``` and ```mySQL_passwd``` in ```.env``` file.
 
 ### What challenges we had and what we learned from them 😎
 
