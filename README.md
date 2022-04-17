@@ -31,8 +31,8 @@ pipeline build mutation-coverage build.yml
   - As a result, the whole logic for handling mutations was done in ```final.sh```
 
 - Using ```git reset --hard```
- - The issue faced here was that we were creating the ```marqdown-mod.js``` everytime we were running iteration.
- - Hence, we used ```git reset --hard``` to revert the changed ```.js``` to its original state.
+  - The issue faced here was that we were creating the ```marqdown-mod.js``` everytime we were running iteration.
+  - Hence, we used ```git reset --hard``` to revert the changed ```.js``` to its original state.
 
 
 ### Team Contributions 👥	
