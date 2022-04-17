@@ -1,62 +1,6002 @@
 {
+  "1000": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "999": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "998": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "997": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "996": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "995": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "994": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "993": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "992": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "991": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 189",
+    "Status": "File modified",
+    "Pixel Difference": "473217"
+  },
+  "990": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "989": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "988": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "987": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "986": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 225",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "985": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 154",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "984": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "983": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 177",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "982": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "981": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "980": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "979": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 282",
+    "Status": "File modified",
+    "Pixel Difference": "407892"
+  },
+  "978": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "977": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "976": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "975": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "974": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "973": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "972": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "971": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "970": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "969": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "968": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 154",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "967": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "966": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "965": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "964": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "963": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "962": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "961": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "960": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "959": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "958": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "957": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "956": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
+  },
+  "955": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "954": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "953": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "952": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "951": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "950": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "949": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "948": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "947": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "946": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 177",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "945": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "944": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "943": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "942": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "941": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "940": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "939": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "938": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "937": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "936": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "935": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "934": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "933": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "932": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 267",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "10990"
+  },
+  "931": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "930": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 239",
+    "Status": "File modified",
+    "Pixel Difference": "532480"
+  },
+  "929": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "928": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "927": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "926": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "925": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "924": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 104",
+    "Status": "File modified",
+    "Pixel Difference": "670720"
+  },
+  "923": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "922": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "921": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 196",
+    "Status": "File modified",
+    "Pixel Difference": "15783"
+  },
+  "920": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "919": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "918": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "917": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "916": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "915": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "914": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "913": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
+  },
+  "912": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 177",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "911": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "910": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "909": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "908": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "907": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "906": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "905": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "904": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "903": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "902": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "901": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "900": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "899": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "898": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "897": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "896": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "895": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 104",
+    "Status": "File modified",
+    "Pixel Difference": "670720"
+  },
+  "894": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "893": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "892": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "891": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "890": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "889": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "888": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "887": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "886": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "885": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "884": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "883": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "882": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "881": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "880": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "879": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 270",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "878": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "877": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "876": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "875": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "874": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "873": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "872": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "871": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "870": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "869": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "868": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "867": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "866": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "865": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "864": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "863": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "862": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "861": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "860": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "859": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "858": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "857": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "856": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "855": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "854": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "853": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "852": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "851": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "850": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "849": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "848": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "847": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "846": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "845": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "844": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "843": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "842": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "841": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "840": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "839": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "838": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "837": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "836": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "835": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "834": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 189",
+    "Status": "File modified",
+    "Pixel Difference": "473217"
+  },
+  "833": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 377",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "832": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "831": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "830": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "829": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "828": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 144",
+    "Status": "File modified",
+    "Pixel Difference": "669"
+  },
+  "827": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "826": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "825": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "824": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "823": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "822": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "821": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "103905"
+  },
+  "820": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 270",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "819": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 236",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "818": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "817": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "816": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "815": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "814": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "813": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "812": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "811": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 289",
+    "Status": "File modified",
+    "Pixel Difference": "555588"
+  },
+  "810": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "809": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "808": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "807": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "806": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "805": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "804": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "803": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 282",
+    "Status": "File modified",
+    "Pixel Difference": "407892"
+  },
+  "802": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 282",
+    "Status": "File modified",
+    "Pixel Difference": "407892"
+  },
+  "801": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "800": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "799": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "798": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "797": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "796": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 270",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "795": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "794": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "793": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "792": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "791": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "790": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "789": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "788": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "787": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "786": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "785": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "784": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 193",
+    "Status": "File modified",
+    "Pixel Difference": "681722"
+  },
+  "783": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "782": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "781": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "780": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 267",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "10990"
+  },
+  "779": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "778": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "777": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "776": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "775": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 104",
+    "Status": "File modified",
+    "Pixel Difference": "670720"
+  },
+  "774": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "773": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "772": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "771": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "770": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "769": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "768": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "767": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "766": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "765": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 282",
+    "Status": "File modified",
+    "Pixel Difference": "407892"
+  },
+  "764": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "763": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "762": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "761": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "760": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "759": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 185",
+    "Status": "File modified",
+    "Pixel Difference": "549718"
+  },
+  "758": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "757": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "756": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "755": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "754": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 165",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "753": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 236",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "752": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 282",
+    "Status": "File modified",
+    "Pixel Difference": "407892"
+  },
+  "751": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "750": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "749": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "748": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "747": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 321",
+    "Status": "File modified",
+    "Pixel Difference": "574982"
+  },
+  "746": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "745": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "744": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "743": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "742": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "741": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "740": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "739": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "738": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "737": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "736": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "735": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "734": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "733": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "732": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "731": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "730": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "729": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "728": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "727": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "726": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "725": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 165",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "724": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "723": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "722": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "721": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "720": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "719": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "103905"
+  },
+  "718": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "717": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 289",
+    "Status": "File modified",
+    "Pixel Difference": "555588"
+  },
+  "716": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "715": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "714": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "713": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 189",
+    "Status": "File modified",
+    "Pixel Difference": "473217"
+  },
+  "712": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "711": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "710": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "709": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "708": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "707": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "706": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "705": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "704": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "703": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "702": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "701": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "700": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "699": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "698": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "697": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "696": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "695": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "694": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "693": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "692": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "691": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 225",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "690": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "689": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 203",
+    "Status": "File modified",
+    "Pixel Difference": "508738"
+  },
+  "688": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "687": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "686": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "685": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 233",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "684": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "683": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "682": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "681": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "680": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 217",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "679": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "678": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "677": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "676": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 282",
+    "Status": "File modified",
+    "Pixel Difference": "407892"
+  },
+  "675": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "674": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "673": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "672": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "671": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "670": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "669": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "668": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "667": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "666": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 196",
+    "Status": "File modified",
+    "Pixel Difference": "15783"
+  },
+  "665": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "664": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "663": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "662": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "661": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 267",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "10990"
+  },
+  "660": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "659": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "658": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "657": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "656": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "655": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "654": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "653": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "652": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "651": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "650": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "649": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "648": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "647": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "646": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "645": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "644": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "643": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "642": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "641": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "640": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "639": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "638": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 92",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "637": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "636": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "635": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "634": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "633": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 236",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "632": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "631": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 165",
+    "Status": "File modified",
+    "Pixel Difference": "868"
+  },
+  "630": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "629": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "628": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 196",
+    "Status": "File modified",
+    "Pixel Difference": "15783"
+  },
+  "627": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "626": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "625": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "5048"
+  },
+  "624": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "623": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "622": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "621": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "620": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "619": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "618": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "617": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 196",
+    "Status": "File modified",
+    "Pixel Difference": "15783"
+  },
+  "616": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "615": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "614": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "613": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "612": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "611": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "610": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "609": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "608": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "607": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "606": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "605": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "604": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "397738"
+  },
+  "603": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "602": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "601": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "600": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "599": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 302",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "598": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 345",
+    "Status": "File modified",
+    "Pixel Difference": "293513"
+  },
+  "597": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "596": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "595": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "594": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 302",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "593": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "592": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "591": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "590": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 203",
+    "Status": "File modified",
+    "Pixel Difference": "508738"
+  },
+  "589": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "588": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "587": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "586": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "585": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "584": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "583": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "582": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "581": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "580": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "579": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "578": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "577": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 154",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "576": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "575": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "574": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "573": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "572": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "571": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "570": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "569": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "568": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "567": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 239",
+    "Status": "File modified",
+    "Pixel Difference": "532480"
+  },
+  "566": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 233",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "565": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "564": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "563": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "562": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 345",
+    "Status": "File modified",
+    "Pixel Difference": "293513"
+  },
+  "561": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "397738"
+  },
+  "560": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "559": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "397738"
+  },
+  "558": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "557": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 193",
+    "Status": "File modified",
+    "Pixel Difference": "681722"
+  },
+  "556": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "555": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "554": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 165",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "553": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "552": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "551": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "550": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 165",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "549": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "548": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "547": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "546": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "545": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "544": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "543": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "542": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "541": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "540": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
+  },
+  "539": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "538": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "537": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "536": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "535": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "534": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "533": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "532": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "531": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "530": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "529": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "528": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "516036"
+  },
+  "527": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "526": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 154",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "525": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "524": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "523": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "522": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "521": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "520": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 289",
+    "Status": "File modified",
+    "Pixel Difference": "555588"
+  },
+  "519": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 165",
+    "Status": "File modified",
+    "Pixel Difference": "868"
+  },
+  "518": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "517": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "516": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
+  },
+  "515": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "514": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "513": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "512": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "511": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 236",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "510": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "509": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 92",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "508": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "507": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "506": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "505": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "504": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "503": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 239",
+    "Status": "File modified",
+    "Pixel Difference": "532480"
+  },
+  "502": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "501": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "500": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "499": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "498": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "497": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "496": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "495": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 217",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "494": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 225",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "493": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "492": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 377",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "491": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "490": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "489": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "488": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "487": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "486": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "485": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "484": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "483": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 165",
+    "Status": "File modified",
+    "Pixel Difference": "868"
+  },
+  "482": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "481": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "480": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "479": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "478": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "477": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "476": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 177",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "475": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 267",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "10990"
+  },
+  "474": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "473": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "472": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "471": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "470": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "469": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "468": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "467": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "466": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "465": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "464": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "463": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 236",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "462": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 165",
+    "Status": "File modified",
+    "Pixel Difference": "868"
+  },
+  "461": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "460": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "459": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 165",
+    "Status": "File modified",
+    "Pixel Difference": "868"
+  },
+  "458": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "457": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "456": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "455": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 144",
+    "Status": "File modified",
+    "Pixel Difference": "669"
+  },
+  "454": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 193",
+    "Status": "File modified",
+    "Pixel Difference": "681722"
+  },
+  "453": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "452": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "451": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "450": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "449": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 92",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "448": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "447": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "446": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 144",
+    "Status": "File modified",
+    "Pixel Difference": "669"
+  },
+  "445": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "444": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "443": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "442": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "441": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "440": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "439": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "438": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "437": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 104",
+    "Status": "File modified",
+    "Pixel Difference": "670720"
+  },
+  "436": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "435": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "434": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "433": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "432": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 282",
+    "Status": "File modified",
+    "Pixel Difference": "407892"
+  },
+  "431": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "430": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 154",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "429": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "428": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "427": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "426": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "425": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 193",
+    "Status": "File modified",
+    "Pixel Difference": "681722"
+  },
+  "424": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "423": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "422": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "421": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "420": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "419": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 185",
+    "Status": "File modified",
+    "Pixel Difference": "549718"
+  },
+  "418": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 193",
+    "Status": "File modified",
+    "Pixel Difference": "681722"
+  },
+  "417": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "416": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "415": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "414": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "413": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "412": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "411": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "410": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "409": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "408": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "407": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "406": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "405": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "404": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "403": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "402": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "401": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
+  },
+  "400": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "399": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "398": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "397": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "396": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "395": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "394": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "393": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 104",
+    "Status": "File modified",
+    "Pixel Difference": "670720"
+  },
+  "392": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 217",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "391": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "390": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "389": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "388": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 165",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "387": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "386": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "385": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "384": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 270",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "383": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "382": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "381": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 321",
+    "Status": "File modified",
+    "Pixel Difference": "574982"
+  },
+  "380": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "379": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "378": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "377": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 233",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "376": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "375": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "374": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "373": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "372": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "371": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "397738"
+  },
+  "370": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "369": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "368": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "367": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 345",
+    "Status": "File modified",
+    "Pixel Difference": "293513"
+  },
+  "366": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "365": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "364": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "363": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "362": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "361": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 193",
+    "Status": "File modified",
+    "Pixel Difference": "681722"
+  },
+  "360": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "359": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 185",
+    "Status": "File modified",
+    "Pixel Difference": "549718"
+  },
+  "358": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 177",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "357": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "356": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "355": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "354": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "353": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "352": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "351": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "350": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "349": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "348": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "347": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "103905"
+  },
+  "346": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "345": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "344": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "343": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "342": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "341": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "340": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "339": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 377",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "338": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 289",
+    "Status": "File modified",
+    "Pixel Difference": "555588"
+  },
+  "337": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "336": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "335": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "334": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "333": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "332": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 267",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "10990"
+  },
+  "331": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "330": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "329": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
+  },
+  "328": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "327": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 289",
+    "Status": "File modified",
+    "Pixel Difference": "555588"
+  },
+  "326": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "325": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "324": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 289",
+    "Status": "File modified",
+    "Pixel Difference": "555588"
+  },
+  "323": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "322": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 177",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "321": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "320": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "319": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "318": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "317": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 196",
+    "Status": "File modified",
+    "Pixel Difference": "15783"
+  },
+  "316": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "315": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "314": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "313": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "312": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "311": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "310": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 377",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "309": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "308": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 193",
+    "Status": "File modified",
+    "Pixel Difference": "681722"
+  },
+  "307": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "306": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "305": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 92",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "304": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "303": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "302": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "301": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "300": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "299": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "298": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "297": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "296": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "295": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "294": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "293": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "292": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "291": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "290": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "289": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "288": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "287": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "286": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 225",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "285": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "284": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "283": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "282": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "281": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "280": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "279": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "278": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 233",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "277": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "276": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "275": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "274": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "273": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "272": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "271": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "270": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "269": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "268": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "267": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "266": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "265": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "264": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "263": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "262": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "261": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "5048"
+  },
+  "260": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "259": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "258": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "257": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 165",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "256": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "255": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "254": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 165",
+    "Status": "File modified",
+    "Pixel Difference": "868"
+  },
+  "253": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "252": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "251": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "250": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "249": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 236",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "248": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "247": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "246": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "245": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "244": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "243": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "242": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "241": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 104",
+    "Status": "File modified",
+    "Pixel Difference": "670720"
+  },
+  "240": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "239": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "238": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "237": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 272",
+    "Status": "File modified",
+    "Pixel Difference": "520596"
+  },
+  "236": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "235": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "234": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "233": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "232": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "231": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "230": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 302",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "229": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "228": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "227": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 189",
+    "Status": "File modified",
+    "Pixel Difference": "473217"
+  },
+  "226": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "225": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "224": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "223": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "222": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 192",
+    "Status": "File modified",
+    "Pixel Difference": "621707"
+  },
+  "221": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "220": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "219": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "218": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "217": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "216": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "215": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "214": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "213": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "212": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "211": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 233",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "210": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 185",
+    "Status": "File modified",
+    "Pixel Difference": "549718"
+  },
+  "209": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "208": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 270",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "207": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "206": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "205": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "204": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "203": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "202": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "201": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 289",
+    "Status": "File modified",
+    "Pixel Difference": "555588"
+  },
+  "200": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "199": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "198": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "197": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 377",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "196": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 185",
+    "Status": "File modified",
+    "Pixel Difference": "549718"
+  },
+  "195": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "194": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "193": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "192": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "191": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "190": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "189": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 321",
+    "Status": "File modified",
+    "Pixel Difference": "574982"
+  },
+  "188": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "187": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "186": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "185": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 177",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "184": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "183": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "182": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "181": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "180": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 92",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "179": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "178": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "177": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "176": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "175": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "174": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "173": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "172": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "171": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "170": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
+  },
+  "169": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "168": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 165",
+    "Status": "File modified",
+    "Pixel Difference": "868"
+  },
+  "167": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "166": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "165": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 225",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "164": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "163": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "162": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "161": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "160": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "159": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "158": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "157": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "156": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "155": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "154": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "153": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "152": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "151": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "150": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 177",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "149": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "148": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "546404"
+  },
+  "147": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "146": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "145": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "144": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "143": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "142": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "141": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 165",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "140": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 165",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "139": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "138": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "137": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "136": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "135": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "134": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 92",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "133": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "132": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "131": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "130": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 217",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "129": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "128": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "127": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "5048"
+  },
+  "126": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "125": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 345",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "124": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "123": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "122": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "121": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 154",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "120": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "119": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 177",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "118": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "117": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "116": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 104",
+    "Status": "File modified",
+    "Pixel Difference": "670720"
+  },
+  "115": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "114": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "113": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "112": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "111": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "110": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "109": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "108": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "107": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "106": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "105": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "104": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 154",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "103": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "102": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "101": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "100": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "99": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 89",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "98": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "527000"
+  },
+  "97": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 189",
+    "Status": "File modified",
+    "Pixel Difference": "473217"
+  },
+  "96": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "95": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 154",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "94": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "93": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "92": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 270",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "91": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 270",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "90": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "89": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 228",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "88": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "87": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "86": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "85": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 92",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "84": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "83": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "82": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "81": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 211",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "80": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "79": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "78": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "77": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "76": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 318",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "75": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "74": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 374",
+    "Status": "File modified",
+    "Pixel Difference": "516036"
+  },
+  "73": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "72": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "71": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 252",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "70": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "69": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "68": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "67": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "66": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "65": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 89",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "64": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "63": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "62": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "61": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
+  },
+  "60": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "59": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "58": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 158",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "57": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 226",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "56": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "55": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "54": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 183",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "53": {
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 177",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "52": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 321",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "51": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "50": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 329",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "49": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "48": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 341",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "47": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "46": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "45": {
+    "Operator Change": "== to != ",
+    "Source Line": "Replacing == with != on line 318",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "44": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "43": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 338",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "42": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "41": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 377",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "40": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 377",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "39": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 392",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "38": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 294",
+    "Status": "File modified",
+    "Pixel Difference": "532463"
+  },
+  "37": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "36": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "35": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "34": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 104",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "33": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 88",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "32": {
+    "Operator Change": "> to < ",
+    "Source Line": "Replacing > with < on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "31": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "30": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "29": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "28": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "27": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 332",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "26": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "25": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "24": {
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "23": {
+    "Operator Change": "Clone Return",
+    "Source Line": "Inserting return at line 374",
+    "Status": "File modified",
+    "Pixel Difference": "487335"
+  },
+  "22": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "21": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "20": {
+    "Operator Change": "|| to && ",
+    "Source Line": "Replacing || with && on line 388",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "19": {
+    "Operator Change": "i++ to i--",
+    "Source Line": "Replacing i++ with i-- on line 160",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "18": {
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "17": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 179",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "16": {
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 102",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "15": {
+    "Operator Change": "++j to j++",
+    "Source Line": "Replacing ++j with j++ on line 249",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
+  },
+  "14": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 185",
+    "Status": "File modified",
+    "Pixel Difference": "549718"
+  },
+  "13": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 294",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "12": {
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 272",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
+  "11": {
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 183",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
+  },
   "10": {
-    "operator": "Constant-0",
-    "sourceLine": "Replacin 0 with 3 on line 377",
-    "result": "Changed",
-    "pixel diff": "487335"
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 373",
+    "Status": "File modified",
+    "Pixel Difference": "528437"
   },
   "9": {
-    "operator": "&& to || ",
-    "sourceLine": "Replacing && with || on line 233",
-    "result": "Changed",
-    "pixel diff": "527000"
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
   },
   "8": {
-    "operator": "Clone Return",
-    "sourceLine": "Inserting return at line 374",
-    "result": "Changed",
-    "pixel diff": "487335"
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
   },
   "7": {
-    "operator": "> to >= ",
-    "sourceLine": "Replacing > with >= on line 294",
-    "result": "Not Changed",
-    "pixel diff": "0"
+    "Operator Change": "< to <= ",
+    "Source Line": "Replacing < with <= on line 377",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
   },
   "6": {
-    "operator": "&& to || ",
-    "sourceLine": "Replacing && with || on line 183",
-    "result": "Exception",
-    "pixel diff": "0"
+    "Operator Change": "if to else if",
+    "Source Line": "Replacing 'if' with 'else if' on line 112",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
   },
   "5": {
-    "operator": "Clone Return",
-    "sourceLine": "Inserting return at line 374",
-    "result": "Changed",
-    "pixel diff": "487335"
+    "Operator Change": "Constant-0",
+    "Source Line": "Replacin 0 with 3 on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "397738"
   },
   "4": {
-    "operator": "Empty string",
-    "sourceLine": "Replacing Empty string with <div>Bug</div> on line 88",
-    "result": "Exception",
-    "pixel diff": "0"
+    "Operator Change": "&& to || ",
+    "Source Line": "Replacing && with || on line 107",
+    "Status": "File modified",
+    "Pixel Difference": "5048"
   },
   "3": {
-    "operator": "Empty string",
-    "sourceLine": "Replacing Empty string with <div>Bug</div> on line 301",
-    "result": "Not Changed",
-    "pixel diff": "0"
+    "Operator Change": "> to >= ",
+    "Source Line": "Replacing > with >= on line 329",
+    "Status": "Exception Encountered",
+    "Pixel Difference": "0"
   },
   "2": {
-    "operator": "if to else if",
-    "sourceLine": "Replacing 'if' with 'else if' on line 112",
-    "result": "Not Changed",
-    "pixel diff": "0"
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 301",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
   },
   "1": {
-    "operator": "Clone Return",
-    "sourceLine": "Inserting return at line 392",
-    "result": "Not Changed",
-    "pixel diff": "0"
+    "Operator Change": "Empty string",
+    "Source Line": "Replacing Empty string with <div>Bug</div> on line 288",
+    "Status": "No Change Occured",
+    "Pixel Difference": "0"
   }
 }

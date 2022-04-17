@@ -35,7 +35,7 @@ jobs:
       - name: test iTrust1
         run: cd iTrust2-v10/iTrust2 && mvn --batch-mode --update-snapshots clean test
   - name: mutation-coverage
-    iterations: 2
+    iterations: 1000
     snapshots:
       - http://localhost:3000/survey/upload.md
       - http://localhost:3000/survey/long.md
