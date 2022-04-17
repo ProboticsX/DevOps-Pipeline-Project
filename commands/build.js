@@ -102,8 +102,27 @@ exports.handler = async argv => {
         }
 
         let job_cmds = doc_json.jobs[index].steps;  
+
+        let snapshotDetails = doc_json.jobs[index].snapshots;
+
+        let finalObjArray = [];
+
+        for(let i=0; i<snapshotDetails.length;i++){
+            let jobDetails = snapshotDetails[i].split('/');
+
+            let object = {};
+            object["fileName"] = jobDetails[4].split('.')[0];
+            object["fileUrl"] = snapshotDetails[i];
+
+            finalObjArray.push(object);
+        }
+
+        let finalJson = {"screenshotDetails":finalObjArray};
+
+        fs.writeFileSync('screenshotDetails.json', JSON.stringify(finalJson));
                  
         await new Setup().runSteps(job_cmds,processor);
+        await new Setup().sshIntoVM("cp /bakerx/screenshotDetails.json ~/checkbox.io-micro-preview/screenshotDetails.json",processor);
         await new Setup().sshIntoVM("cp /bakerx/final.sh . ",processor);
         await new Setup().sshIntoVM("bash final.sh "+ doc_json.jobs[index].iterations,processor);
     } 

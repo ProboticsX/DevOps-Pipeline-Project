@@ -1,7 +1,7 @@
 # for loop iterations
 
-rm -rf log.json temp1.json temp2.json pixelDiff1 pixelDiff2 pixelDiff3 pixelDiff4
-mkdir /bakerx/mutated
+rm -rf log.json temp1.json temp2.json pixelDiff_1 pixelDiff_2 pixelDiff_3 pixelDiff_4
+mkdir /bakerx/mutation
 touch log.json temp1.json temp2.json 
 exceptionCounter=0
 changeCounter=0
@@ -17,49 +17,54 @@ do
         sourceLine=$(cat output.txt| awk '{if(NR==3) print $0}')
         #echo $operator
         #echo $sourceLine
-        
-                forever start index.js
-                sleep 3
-                {
-                screenshot http://localhost:3000/survey/upload.md /home/vagrant/mutated/upload_screenshot/$i 
-                } || {
-                    flag_ex=1
-                }
-                {
-                screenshot http://localhost:3000/survey/long.md /home/vagrant/mutated/long_screenshot/$i 
-                } || {
-                    flag_ex=1
-                }
-                {
-                screenshot http://localhost:3000/survey/survey.md /home/vagrant/mutated/survey_screenshot/$i 
-                } || {
-                    flag_ex=1
-                }
-                {
-                screenshot http://localhost:3000/survey/variations.md /home/vagrant/mutated/variations_screenshot/$i 
-                } || {
-                    flag_ex=1
-                }
-                forever stop index.js 
-                if [ $flag_ex -eq 0 ]
-                then
-                cd ~ ; 
-                echo "Here is comparison"
-                compare -metric AE -fuzz 5% ~/originalSnaps/ori_upload.png ~/mutated/upload_screenshot/$i.png null: 2>pixelDiff1
-                compare -metric AE -fuzz 5% ~/originalSnaps/ori_long.png ~/mutated/long_screenshot/$i.png null: 2>pixelDiff2
-                compare -metric AE -fuzz 5% ~/originalSnaps/ori_survey.png ~/mutated/survey_screenshot/$i.png null: 2>pixelDiff3
-                compare -metric AE -fuzz 5% ~/originalSnaps/ori_variations.png ~/mutated/variations_screenshot/$i.png null: 2>pixelDiff4
-                
-                pixelDiff=$(( $(head -n 1 pixelDiff1)+$(head -n 1 pixelDiff2)+$(head -n 1 pixelDiff3)+$(head -n 1 pixelDiff4) ))
 
-                        if [ $pixelDiff -eq 0 ]
-                        then
-                        endResult='Not Changed'
-                        else
-                        endResult='Changed'
-                        changeCounter=$(($changeCounter+1))
-                        fi
-                fi
+        fileLength=$(jq '.screenshotDetails | length' screenshotDetails.json)
+
+        cd ~
+        cd checkbox.io-micro-preview
+        forever start index.js
+
+        for (( j=0; j<$fileLength; j++ ))
+        
+        do
+
+        cd ~
+        cd checkbox.io-micro-preview
+
+        screenshotFileName=$(jq '.screenshotDetails['$j'].fileName' screenshotDetails.json | tr -d '"')
+        screenshotFileUrl=$(jq '.screenshotDetails['$j'].fileUrl' screenshotDetails.json | tr -d '"')
+
+        sleep 3
+        {
+            screenshot $screenshotFileUrl /home/vagrant/mutation/$screenshotFileName/$i
+        } || {
+            flag_ex=1
+        } 
+         if [ $flag_ex -eq 0 ]
+            then
+            cd ~ ; 
+            echo "Here is comparison originalSnaps/ori_$screenshotFileName"
+            compare -metric AE -fuzz 5% ~/originalSnaps/ori_$screenshotFileName.png ~/mutation/$screenshotFileName/$i.png null: 2>pixelDiff1
+            pixelDiff=$(( $pixelDiff + $(head -n 1 pixelDiff1) ))
+       
+        fi
+        
+        done
+        
+        # forever list
+
+        cd ~
+        cd checkbox.io-micro-preview
+        forever stop index.js
+        echo "pixeldifff $pixelDiff"
+        if [ $pixelDiff -eq 0 ]
+            then
+            endResult='Not Changed'
+            else
+            endResult='Changed'
+            changeCounter=$(($changeCounter+1))
+        fi
+                
         echo $flag_ex
         if [ $flag_ex -eq 1 ]
         then
@@ -85,10 +90,13 @@ echo $json_data > temp1.json
 cat log.json > temp2.json
 jq -s add temp1.json temp2.json > log.json
 echo "Mutation-$i completed"
+cd ~
+cd checkbox.io-micro-preview
+git reset --hard > log.txt
 done
 
 
-cp -r ~/mutated/ /bakerx/
+cp -r ~/mutation/ /bakerx/
 cp -r ~/log.json /bakerx/result
 
 

@@ -285,7 +285,7 @@ function Expression_Condition(expr,ast,from_operator,to_operator){
 
 
 rewrite("marqdown.js", 
-"marqdown-mod.js")
+"marqdown.js")
 
 // HELPER
 
