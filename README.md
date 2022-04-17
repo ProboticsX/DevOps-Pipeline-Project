@@ -22,22 +22,17 @@ pipeline build mutation-coverage build.yml
 
 ### What challenges we had and what we learned from them 😎
 
-- Running Ansible in Windows
-  - Ansible is available for Windows, but only as a client, we wanted to run ansible as a host, so to overcome this challenge we created two VMs and used one VM as a host ```ansible``` and the other VM as web server ```pipeline```
+- Error in capturing the snapshot in ```screenshot.js```
+  - While rendering the ```.js``` file after applying the mutations, we were not able to capture the snapshot of the changed ```.js``` file because of some syntax error since we applied some mutations in the file.
+  - Hence, we resolved the error using the ```try/catch``` clause so that the syntax error doesn't close the whole process.
+  
+- Rendering the 4 files using ```final.sh```
+  - The challenge faced here was while rendering the four files given to us, there was a major challenge in handling the ouputs for each iteration in ```build.yml```
+  - As a result, the whole logic for handling mutations was done in ```final.sh```
 
-- Cloning iTrust using Ansible
-  - The challenge faced here was in cloning the ```iTrust``` repo that required the user name and password to be specified while running the command which we neither wanted to disclose nor did we wanted to put in ```.env```
-  - Hence, we used the GitHub token to pass it as a password hence we were able to overcome this challenge.
-
-- Setting up password for SQL
- - The major requirement for setting up iTrust is the installation of ```mysql``` which needs username and password to be passed from ```.env```. Finally, we were able to set the mysql password through ```my.cnf.j2``` plugin.
-
-```
- - name: copy .my.cnf file with mysql root password credentials
-    become: yes
-    template: src=my.cnf.j2 dest=/root/.my.cnf owner=root mode=0600
-    tags: iTrust-build
-```
+- Using ```git reset --hard```
+ - The issue faced here was that we were creating the ```marqdown-mod.js``` everytime we were running iteration.
+ - Hence, we used ```git reset --hard``` to revert the changed ```.js``` to its original state.
 
 
 ### Team Contributions 👥	
@@ -45,17 +40,7 @@ pipeline build mutation-coverage build.yml
 
 ### Project board 🗒️
 
- <img width="900" alt="image" src="https://media.github.ncsu.edu/user/22460/files/22d6adee-487f-44c8-a8df-0fc93cd38ff3">
-
-
-### Future - Work to be done 🕛
-
-  - Complete the setup block in ```build.yml``` to include sql setup and maven commands
-  - Design the ```build.yml``` to include commands to build iTrust in the virtual machine
-  - Store the required secrets in the ```.env``` file.
-  - Update project boards accordingly
-  - Take a screencast of the implementation
-  - Update the project report
+![image](https://media.github.ncsu.edu/user/22719/files/3cbd4639-9cc8-4bcb-abd2-820857fa45eb)
    
 
 ## Contributors
