@@ -19,10 +19,12 @@ pipeline build mutation-coverage build.yml
 
 ![WhatsApp Image 2022-04-17 at 10 15 26 AM](https://media.github.ncsu.edu/user/22719/files/d35eef28-4cd8-4ab0-8ee0-7a6c3bc34484)
 
+Reference folder : https://github.ncsu.edu/CSC-DevOps-S22/DEVOPS-18/tree/M2/referenceSnaps
 
 mutation folder: https://github.ncsu.edu/CSC-DevOps-S22/DEVOPS-18/tree/M2/mutation
 
 result file: https://github.ncsu.edu/CSC-DevOps-S22/DEVOPS-18/blob/M2/result
+
 
 ***Note***: Make sure that ```.env``` file is in the below format:
 ```
