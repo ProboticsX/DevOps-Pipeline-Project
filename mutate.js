@@ -3,6 +3,7 @@ const escodegen = require("escodegen");
 const options = {tokens:true, tolerant: true, loc: true, range: true };
 const fs = require("fs");
 const chalk = require('chalk');
+const path = require('path');
 
 let operations = [ConditionalBoundary,IncrementalMutations, NegateConditionals,
                   ConditionalExpression,CloneReturn,EmptyString, ConstantReplace,ControlFlow ]
@@ -283,9 +284,30 @@ function Expression_Condition(expr,ast,from_operator,to_operator){
     })
 }
 
+filesCollection=[]
+filesToSkip=['node_modules', '.git', '.gitignore', 'index.js', 'test', 'mutate.js']
+function readDirectorySynchronously(directory) {
+    var currentDirectorypath = path.join(__dirname + '/' + directory);
 
-rewrite("marqdown.js", 
-"marqdown.js")
+    var currentDirectory = fs.readdirSync(currentDirectorypath, 'utf8');
+
+    currentDirectory.forEach(file => {
+        var fileShouldBeSkipped = filesToSkip.indexOf(file) > -1;
+        var pathOfCurrentItem = path.join(__dirname + '/'+ directory + '/' + file);
+        //console.log(pathOfCurrentItem)
+        if (!fileShouldBeSkipped && fs.statSync(pathOfCurrentItem).isFile() && path.extname(pathOfCurrentItem) == '.js') {
+            filesCollection.push(pathOfCurrentItem);
+        }
+        else if (!fileShouldBeSkipped && fs.statSync(pathOfCurrentItem).isDirectory()) {
+            var directorypath = path.join(directory + '/' + file);
+            readDirectorySynchronously(directorypath);
+        }
+    });
+}
+
+readDirectorySynchronously('checkbox.io-micro-preview')
+let file_select = getRandomInt(filesCollection.length)
+rewrite(filesCollection[file_select], filesCollection[file_select])
 
 // HELPER
 

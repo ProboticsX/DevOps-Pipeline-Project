@@ -25,13 +25,7 @@ jobs:
       - name: install JRE
         run: sudo apt-get install default-jre -y
       - name: install JDK
-        run: sudo apt-get install openjdk-11-jdk -y
-      #- name: install Maven
-        #run: sudo apt-get install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH 
-      #- name: install nodejs
-        #run: sudo apt install nodejs -y
-      #- name: install npm
-        #run: sudo apt install npm -y   
+        run: sudo apt-get install openjdk-11-jdk -y 
       - name: install mysql
         run: sudo apt-get install -y mysql-server         
       - name: create application.yml file
@@ -41,7 +35,7 @@ jobs:
       - name: test iTrust1
         run: cd iTrust2-v10/iTrust2 && mvn --batch-mode --update-snapshots clean test
   - name: mutation-coverage
-    iterations: 1
+    iterations: 30
     snapshots:
       - http://localhost:3000/survey/upload.md
       - http://localhost:3000/survey/long.md
@@ -65,7 +59,7 @@ jobs:
       - name: stop service
         run: cd checkbox.io-micro-preview && forever stop index.js
       - name: copy mutate.js
-        run: cp /bakerx/mutate.js /home/vagrant/checkbox.io-micro-preview/mutate.js
+        run: cp /bakerx/mutate.js /home/vagrant/mutate.js && sudo npm install escodegen && sudo npm install esprima
       - name: Clean structure
         run: rm -rf /bakerx/mutation /home/vagrant/mutation
       - name: store mutation screenshots in the folders created 

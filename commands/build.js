@@ -9,6 +9,7 @@ const { options } = require("yargs");
 require('dotenv').config();
 
 
+
 class Setup{
     // Executing the commands in VM via ssh
     async sshIntoVM(command,processor) {
@@ -122,8 +123,9 @@ exports.handler = async argv => {
         fs.writeFileSync('screenshotDetails.json', JSON.stringify(finalJson));
                  
         await new Setup().runSteps(job_cmds,processor);
-        await new Setup().sshIntoVM("cp /bakerx/screenshotDetails.json ~/checkbox.io-micro-preview/screenshotDetails.json",processor);
+        await new Setup().sshIntoVM("cp /bakerx/screenshotDetails.json ~/screenshotDetails.json",processor);
         await new Setup().sshIntoVM("cp /bakerx/final.sh . ",processor);
+        await new Setup().sshIntoVM("sed -i 's/\\r//g' final.sh",processor);
         await new Setup().sshIntoVM("bash final.sh "+ doc_json.jobs[index].iterations,processor);
     } 
     catch (e) 

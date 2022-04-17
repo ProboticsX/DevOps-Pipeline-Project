@@ -1,6 +1,5 @@
 # for loop iterations
-
-rm -rf log.json temp1.json temp2.json pixelDiff_1 pixelDiff_2 pixelDiff_3 pixelDiff_4
+rm -rf log.json temp1.json temp2.json 
 mkdir /bakerx/mutation
 touch log.json temp1.json temp2.json 
 exceptionCounter=0
@@ -8,7 +7,6 @@ changeCounter=0
 for (( i=1; i<=$1; i++ ))
 do 
         cd ~
-        cd checkbox.io-micro-preview
         echo "Mutation-$i started"
         pixelDiff=0
         flag_ex=0
@@ -23,19 +21,18 @@ do
         cd ~
         cd checkbox.io-micro-preview
         forever start index.js
-
+        cd ~
         for (( j=0; j<$fileLength; j++ ))
-        
         do
 
         cd ~
-        cd checkbox.io-micro-preview
 
         screenshotFileName=$(jq '.screenshotDetails['$j'].fileName' screenshotDetails.json | tr -d '"')
         screenshotFileUrl=$(jq '.screenshotDetails['$j'].fileUrl' screenshotDetails.json | tr -d '"')
-
+        
         sleep 3
-        {
+        { 
+            cd ~
             screenshot $screenshotFileUrl /home/vagrant/mutation/$screenshotFileName/$i
         } || {
             flag_ex=1
@@ -43,7 +40,7 @@ do
          if [ $flag_ex -eq 0 ]
             then
             cd ~ ; 
-            echo "Here is comparison originalSnaps/ori_$screenshotFileName"
+            
             compare -metric AE -fuzz 5% ~/originalSnaps/ori_$screenshotFileName.png ~/mutation/$screenshotFileName/$i.png null: 2>pixelDiff1
             pixelDiff=$(( $pixelDiff + $(head -n 1 pixelDiff1) ))
        
@@ -56,16 +53,18 @@ do
         cd ~
         cd checkbox.io-micro-preview
         forever stop index.js
-        echo "pixeldifff $pixelDiff"
-        if [ $pixelDiff -eq 0 ]
-            then
-            endResult='Not Changed'
-            else
-            endResult='Changed'
-            changeCounter=$(($changeCounter+1))
-        fi
+        if [ $flag_ex -eq 0 ]
+        then
+            if [ $pixelDiff -eq 0 ]
+                then
+                endResult='Not Changed'
+                else
+                endResult='Changed'
+                changeCounter=$(($changeCounter+1))
+            fi
+        fi    
                 
-        echo $flag_ex
+        
         if [ $flag_ex -eq 1 ]
         then
         endResult='Exception'
@@ -100,8 +99,8 @@ cp -r ~/mutation/ /bakerx/
 cp -r ~/log.json /bakerx/result
 
 
-passedCounter=$((1000-$changeCounter-$exceptionCounter))
-denom=$(( 1000-$exceptionCounter ))
+passedCounter=$(($1-$changeCounter-$exceptionCounter))
+denom=$(( $1-$exceptionCounter ))
 
 echo "Failed Mutants: $changeCounter"
 echo "Passed Mutants: $passedCounter"

@@ -23,10 +23,10 @@ const [, , ...args] = process.argv;
 
     await page.close();
     await browser.close();
-    console.log("Screenshot taken", url, filename);
+    //console.log("Screenshot taken", url, filename);
   } catch(err){
-    //console.log("screenshot caught exception")
-    console.error("Errrr:::",err.message);
+    console.log("screenshot caught exception")
+    //console.error("Errrr:::",err.message);
     process.exit(1);
   }
 })();
