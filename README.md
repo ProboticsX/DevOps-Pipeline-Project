@@ -18,8 +18,11 @@ pipeline build mutation-coverage build.yml
  <-----------SS showing 1000 iterations were completed successfully---------------->
  <-----------SS showing result.json---------------->
 
-***Note***: Make sure that you've set up the ```Git_Token``` and ```mySQL_passwd``` in ```.env``` file.
-
+***Note***: Make sure that ```.env``` file is in the below format:
+```
+Git_Token = <ENTER GITHUB TOKEN>
+mySQL_passwd = <ENTER MYSQL PASSWORD>
+```
 ### What challenges we had and what we learned from them 😎
 
 - Error in capturing the snapshot in ```screenshot.js```
