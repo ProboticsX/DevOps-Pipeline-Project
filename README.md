@@ -40,10 +40,10 @@ mySQL_passwd = <ENTER MYSQL PASSWORD>
 ### File Structure 📁
 ```
 -> referenceSnaps
- -> reflong.png
- -> refupload.png
- -> refvariations.png
- -> refsurvey.png
+ -> ref_long.png
+ -> ref_upload.png
+ -> ref_variations.png
+ -> ref_survey.png
  
 -> mutations
   -> upload
