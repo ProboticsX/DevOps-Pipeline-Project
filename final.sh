@@ -96,6 +96,7 @@ done
 
 
 cp -r ~/mutation/ /bakerx/
+cp -r ~/referenceSnaps/ /bakerx/
 cp -r ~/log.json /bakerx/result
 
 
