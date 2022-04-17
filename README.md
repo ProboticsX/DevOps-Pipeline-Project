@@ -34,6 +34,34 @@ pipeline build mutation-coverage build.yml
   - The issue faced here was that we were creating the ```marqdown-mod.js``` everytime we were running iteration.
   - Hence, we used ```git reset --hard``` to revert the changed ```.js``` to its original state.
 
+### File Structure 📁
+```
+-> referenceSnaps
+ -> reflong.png
+ -> refupload.png
+ -> refvariations.png
+ -> refsurvey.png
+ 
+-> mutations
+  -> upload
+     -> 1.png
+     -> 2.png
+     -> 3.png
+  -> long
+     -> 1.png
+     -> 2.png
+     -> 3.png
+  -> variations
+     -> 1.png
+     -> 2.png
+     -> 3.png
+  -> survey
+     -> 1.png
+     -> 2.png
+     -> 3.png
+   ...
+```
+
 
 ### Team Contributions 👥	
 
