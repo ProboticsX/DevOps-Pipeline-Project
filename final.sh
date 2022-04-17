@@ -1,17 +1,17 @@
 # for loop iterations
-rm -rf log.json temp1.json temp2.json 
+rm -rf log.json tempFile1.json tempFile2.json 
 mkdir /bakerx/mutation
-touch log.json temp1.json temp2.json 
-exceptionCounter=0
-changeCounter=0
+touch log.json tempFile1.json tempFile2.json 
+exceptionCount=0
+changeCount=0
 for (( i=1; i<=$1; i++ ))
 do 
         cd ~
         echo "Mutation-$i started"
-        pixelDiff=0
-        flag_ex=0
+        pixelDifference=0
+        exceptionStatus=0
         node mutate.js > output.txt
-        operator=$(cat output.txt| awk '{if(NR==2) print $0}')
+        operatorChange=$(cat output.txt| awk '{if(NR==2) print $0}')
         sourceLine=$(cat output.txt| awk '{if(NR==3) print $0}')
         #echo $operator
         #echo $sourceLine
@@ -35,14 +35,14 @@ do
             cd ~
             screenshot $screenshotFileUrl /home/vagrant/mutation/$screenshotFileName/$i
         } || {
-            flag_ex=1
+            exceptionStatus=1
         } 
-         if [ $flag_ex -eq 0 ]
+         if [ $exceptionStatus -eq 0 ]
             then
             cd ~ ; 
             
-            compare -metric AE -fuzz 5% ~/originalSnaps/ori_$screenshotFileName.png ~/mutation/$screenshotFileName/$i.png null: 2>pixelDiff1
-            pixelDiff=$(( $pixelDiff + $(head -n 1 pixelDiff1) ))
+            compare -metric AE -fuzz 5% ~/referenceSnaps/ref_$screenshotFileName.png ~/mutation/$screenshotFileName/$i.png null: 2>pixelDifference1
+            pixelDifference=$(( $pixelDifference + $(head -n 1 pixelDifference1) ))
        
         fi
         
@@ -53,31 +53,31 @@ do
         cd ~
         cd checkbox.io-micro-preview
         forever stop index.js
-        if [ $flag_ex -eq 0 ]
+        if [ $exceptionStatus -eq 0 ]
         then
-            if [ $pixelDiff -eq 0 ]
+            if [ $pixelDifference -eq 0 ]
                 then
-                endResult='Not Changed'
+                status='No Change Occured'
                 else
-                endResult='Changed'
-                changeCounter=$(($changeCounter+1))
+                status='File modified'
+                changeCount=$(($changeCount+1))
             fi
         fi    
                 
         
-        if [ $flag_ex -eq 1 ]
+        if [ $exceptionStatus -eq 1 ]
         then
-        endResult='Exception'
-        exceptionCounter=$(($exceptionCounter+1))
+        status='Exception Encountered'
+        exceptionCount=$(($exceptionCount+1))
         exceptionFlag=false
         fi
 
-json_data=$(cat <<EOF 
+resultData=$(cat <<EOF 
 {"$i":
-{"operator": "$operator",
-"sourceLine": "$sourceLine",
-"result": "$endResult",
-"pixel diff": "$pixelDiff"
+{"Operator Change": "$operatorChange",
+"Source Line": "$sourceLine",
+"Status": "$status",
+"Pixel Difference": "$pixelDifference"
 }
 }
 EOF
@@ -85,9 +85,9 @@ EOF
 
 
 cd ~
-echo $json_data > temp1.json
-cat log.json > temp2.json
-jq -s add temp1.json temp2.json > log.json
+echo $resultData > tempFile1.json
+cat log.json > tempFile2.json
+jq -s add tempFile1.json tempFile2.json > log.json
 echo "Mutation-$i completed"
 cd ~
 cd checkbox.io-micro-preview
@@ -99,10 +99,10 @@ cp -r ~/mutation/ /bakerx/
 cp -r ~/log.json /bakerx/result
 
 
-passedCounter=$(($1-$changeCounter-$exceptionCounter))
-denom=$(( $1-$exceptionCounter ))
+passedCounter=$(($1-$changeCount-$exceptionCount))
+denom=$(( $1-$exceptionCount ))
 
-echo "Failed Mutants: $changeCounter"
+echo "Failed Mutants: $changeCount"
 echo "Passed Mutants: $passedCounter"
-echo "Exception Mutants: $exceptionCounter"
-echo "Mutation Coverage: $changeCounter/$denom"
+echo "Exception Mutants: $exceptionCount"
+echo "Mutation Coverage: $changeCount/$denom"

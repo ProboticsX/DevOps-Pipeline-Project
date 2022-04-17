@@ -4,7 +4,7 @@ setup:
   - rm -rf iTrust2-v10
   - rm -rf checkbox.io-micro-preview
   - rm -rf screenshot
-  - rm -rf originalSnaps
+  - rm -rf referenceSnaps
   - sudo apt-get install -qq -y debconf-utils
   - export DEBIAN_FRONTEND="noninteractive"  
   - echo \"mysql-server mysql-server/root_password password passwd\" | sudo debconf-set-selections
@@ -35,7 +35,7 @@ jobs:
       - name: test iTrust1
         run: cd iTrust2-v10/iTrust2 && mvn --batch-mode --update-snapshots clean test
   - name: mutation-coverage
-    iterations: 30
+    iterations: 2
     snapshots:
       - http://localhost:3000/survey/upload.md
       - http://localhost:3000/survey/long.md
@@ -55,7 +55,7 @@ jobs:
       - name: Install libraries for snapshot utility
         run: sudo apt-get install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget -y
       - name: take screenshot of upload.md
-        run: mkdir originalSnaps && cd originalSnaps && sudo apt-get install -y libgbm-dev && screenshot http://localhost:3000/survey/long.md ori_long && screenshot http://localhost:3000/survey/survey.md ori_survey && screenshot http://localhost:3000/survey/upload.md ori_upload && screenshot http://localhost:3000/survey/variations.md ori_variations
+        run: mkdir referenceSnaps && cd referenceSnaps && sudo apt-get install -y libgbm-dev && screenshot http://localhost:3000/survey/long.md ref_long && screenshot http://localhost:3000/survey/survey.md ref_survey && screenshot http://localhost:3000/survey/upload.md ref_upload && screenshot http://localhost:3000/survey/variations.md ref_variations
       - name: stop service
         run: cd checkbox.io-micro-preview && forever stop index.js
       - name: copy mutate.js
