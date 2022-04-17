@@ -73,6 +73,9 @@ mySQL_passwd = <ENTER MYSQL PASSWORD>
 
 ![image](https://media.github.ncsu.edu/user/22719/files/3cbd4639-9cc8-4bcb-abd2-820857fa45eb)
    
+### Screencast
+
+Link: https://youtu.be/pzoK56wi7xw
 
 ## Contributors
 
