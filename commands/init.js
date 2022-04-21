@@ -24,13 +24,13 @@ exports.handler = async argv => {
         let pull_img = `bakerx pull focal cloud-images.ubuntu.com`;                   // Pull the focal image
         child_process.execSync(pull_img, {stdio: ['inherit', 'inherit', 'inherit']});       
 
-        let createVM = `bakerx run mutation-vm focal --ip 192.168.56.10 --sync --memory 4096`;  // Create VM
+        let createVM = `bakerx run deploy-vm focal --ip 192.168.56.10 --sync --memory 4096`;  // Create VM
         child_process.execSync(createVM, {stdio: ['inherit', 'inherit', 'inherit']});       
 	
-	let print_get_info = `bakerx ssh-info mutation-vm --format json`;    // Display connection information of VM
+	let print_get_info = `bakerx ssh-info deploy-vm --format json`;    // Display connection information of VM
         child_process.execSync(print_get_info, {stdio: ['inherit', 'inherit', 'inherit']});    
 	    
-        let get_info = `bakerx ssh-info mutation-vm --format json > "VM_Info.json"`;    // Store connection information of VM in JSON file
+        let get_info = `bakerx ssh-info deploy-vm --format json > "VM_Info.json"`;    // Store connection information of VM in JSON file
         child_process.execSync(get_info, {stdio: ['inherit', 'inherit', 'inherit']});                                    
     }
     else // For Mac M1 processors
@@ -40,8 +40,8 @@ exports.handler = async argv => {
         child_process.execSync(`mkdir keys`);
         child_process.execSync(`mv key ./keys `);   // Retrieve ssh-key of basicvm
         child_process.execSync(`vm pull`, {stdio: ['inherit', 'inherit', 'inherit']});   // Pull the image
-        child_process.execSync(`vm run mutation-vm ubuntu:jammy`, {stdio: ['inherit', 'inherit', 'inherit']});
-        const info=child_process.execSync(`vm ssh-config mutation-vm `);
+        child_process.execSync(`vm run deploy-vm ubuntu:jammy`, {stdio: ['inherit', 'inherit', 'inherit']});
+        const info=child_process.execSync(`vm ssh-config deploy-vm `);
         var temp1 = {}
         info.toString().trim().split(/\r?\n/).forEach(line =>  {
             if(line.trim().length > 0) {
