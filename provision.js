@@ -16,7 +16,7 @@ class CreateDroplet{
 		let dropletId = await this.createDroplet(dropletName, region, imageName, sshFingerprint);
 		this.dropletContent['name'] = "root";
 		this.dropletContent['dropletId'] = dropletId.toString();
-		//await this.dropletInfo(dropletId);
+		await this.dropletInfo(dropletId);
 		// await this.deleteDroplet(dropletId);
 	}
 

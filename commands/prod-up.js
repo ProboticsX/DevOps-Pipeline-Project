@@ -31,6 +31,7 @@ exports.handler = async argv => {
 	var imageName = "ubuntu-20-04-x64"; // Fill one in from #2
     
     await provision.init(dropletName, region, imageName, sshFingerprint);
+
     await new Setup().sshIntoVM("cp /bakerx/web-srv .ssh/", processor);
     await new Setup().sshIntoVM("chmod 600 .ssh/web-srv", processor);
     
@@ -45,8 +46,14 @@ exports.handler = async argv => {
         let droplet_ssh = null
         configFile_droplet = JSON.parse(configFile_droplet);
 
-        droplet_ssh = `ssh -i \".ssh/web-srv\" ${configFile_droplet.name}@${configFile_droplet.publicIP}`
-        await new Setup().sshIntoVM(`${droplet_ssh} \"touch hello.txt\"`,processor);
+        droplet_ssh = `"ssh -i .ssh/web-srv -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${configFile_droplet.name}@${configFile_droplet.publicIP}"`
+        var delayInMilliseconds = 30000; //1 second
+
+        setTimeout(async function() {
+            await new Setup().sshIntoVM(`${droplet_ssh} "touch hello.txt"`,processor);
+        }, delayInMilliseconds);
+
+        // await new Setup().sshIntoVM(`${droplet_ssh} touch hello.txt`,processor);
     }
 
     catch (e) 
