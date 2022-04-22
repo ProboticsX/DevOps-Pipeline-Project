@@ -3,6 +3,7 @@ const fs = require("fs");
 const axios    = require("axios");
 const chalk  = require('chalk');
 
+
 class GenerateSSH{
 
     async generateSSH(){    
@@ -59,7 +60,6 @@ class GenerateSSH{
 		console.log('data',response.data);
 		
         let ssh_fingerprint = response.data.ssh_key.fingerprint;
-
         return ssh_fingerprint;
     }
 

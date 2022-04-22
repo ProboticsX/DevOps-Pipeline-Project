@@ -1,8 +1,10 @@
 const axios    = require("axios");
 const chalk  = require('chalk');
+const fs = require("fs");
 
 class CreateDroplet{
 	constructor(){
+		this.dropletContent = {};
 		this.headers = {};
 		this.configuration = {};
 		this.publicIP = '';
@@ -12,7 +14,9 @@ class CreateDroplet{
 	async init(dropletName, region, imageName, sshFingerprint){
 		await this.initialize();
 		let dropletId = await this.createDroplet(dropletName, region, imageName, sshFingerprint);
-		await this.dropletInfo(dropletId);
+		this.dropletContent['name'] = "root";
+		this.dropletContent['dropletId'] = dropletId.toString();
+		//await this.dropletInfo(dropletId);
 		// await this.deleteDroplet(dropletId);
 	}
 
@@ -129,7 +133,18 @@ class CreateDroplet{
 			this.privateIP = v4[1]["ip_address"];
 			console.log("Public IP Address: ", this.publicIP);
 			console.log("Private IP Address: ", this.privateIP);
+
+			this.dropletContent['publicIP'] = this.publicIP.toString();
 			// Print out IP address
+			var jsonContent = JSON.stringify(this.dropletContent)
+			fs.writeFileSync("dropletContent.json", jsonContent, 'utf8', function (err) {     
+				if (err) {
+					console.log("An error occured while writing JSON Object to File.");
+					return console.log(err);
+				}
+			 
+			});
+
 		}
 
 	}
