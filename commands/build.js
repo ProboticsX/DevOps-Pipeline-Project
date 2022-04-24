@@ -104,29 +104,29 @@ exports.handler = async argv => {
 
         let job_cmds = doc_json.jobs[index].steps;  
 
-        let snapshotDetails = doc_json.jobs[index].snapshots;
+        // let snapshotDetails = doc_json.jobs[index].snapshots;
 
-        let finalObjArray = [];
+        // let finalObjArray = [];
 
-        for(let i=0; i<snapshotDetails.length;i++){
-            let jobDetails = snapshotDetails[i].split('/');
+        // for(let i=0; i<snapshotDetails.length;i++){
+        //     let jobDetails = snapshotDetails[i].split('/');
 
-            let object = {};
-            object["fileName"] = jobDetails[4].split('.')[0];
-            object["fileUrl"] = snapshotDetails[i];
+        //     let object = {};
+        //     object["fileName"] = jobDetails[4].split('.')[0];
+        //     object["fileUrl"] = snapshotDetails[i];
 
-            finalObjArray.push(object);
-        }
+        //     finalObjArray.push(object);
+        // }
 
-        let finalJson = {"screenshotDetails":finalObjArray};
+        // let finalJson = {"screenshotDetails":finalObjArray};
 
-        fs.writeFileSync('screenshotDetails.json', JSON.stringify(finalJson));
+        // fs.writeFileSync('screenshotDetails.json', JSON.stringify(finalJson));
                  
         await new Setup().runSteps(job_cmds,processor);
-        await new Setup().sshIntoVM("cp /bakerx/screenshotDetails.json ~/screenshotDetails.json",processor);
-        await new Setup().sshIntoVM("cp /bakerx/final.sh . ",processor);
-        await new Setup().sshIntoVM("sed -i 's/\\r//g' final.sh",processor);
-        await new Setup().sshIntoVM("bash final.sh "+ doc_json.jobs[index].iterations,processor);
+        // await new Setup().sshIntoVM("cp /bakerx/screenshotDetails.json ~/screenshotDetails.json",processor);
+        // await new Setup().sshIntoVM("cp /bakerx/final.sh . ",processor);
+        // await new Setup().sshIntoVM("sed -i 's/\\r//g' final.sh",processor);
+        // await new Setup().sshIntoVM("bash final.sh "+ doc_json.jobs[index].iterations,processor);
     } 
     catch (e) 
     {
