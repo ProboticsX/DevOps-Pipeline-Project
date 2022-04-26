@@ -92,6 +92,7 @@ exports.handler = async argv => {
                 index = i;
             }
         }
+        if(job_name=="itrust-build") {
         let setup_cmds = doc_json.setup;        
         await new Setup().runSetup(setup_cmds,processor);
 
@@ -101,32 +102,37 @@ exports.handler = async argv => {
         if(index==-1){
             return;
         }
+    }
 
         let job_cmds = doc_json.jobs[index].steps;  
 
-        // let snapshotDetails = doc_json.jobs[index].snapshots;
+        if(job_name == "mutation-coverage") {
 
-        // let finalObjArray = [];
+        let snapshotDetails = doc_json.jobs[index].snapshots;
 
-        // for(let i=0; i<snapshotDetails.length;i++){
-        //     let jobDetails = snapshotDetails[i].split('/');
+        let finalObjArray = [];
 
-        //     let object = {};
-        //     object["fileName"] = jobDetails[4].split('.')[0];
-        //     object["fileUrl"] = snapshotDetails[i];
+        for(let i=0; i<snapshotDetails.length;i++){
+            let jobDetails = snapshotDetails[i].split('/');
 
-        //     finalObjArray.push(object);
-        // }
+            let object = {};
+            object["fileName"] = jobDetails[4].split('.')[0];
+            object["fileUrl"] = snapshotDetails[i];
 
-        // let finalJson = {"screenshotDetails":finalObjArray};
+            finalObjArray.push(object);
+        }
 
-        // fs.writeFileSync('screenshotDetails.json', JSON.stringify(finalJson));
-                 
+        let finalJson = {"screenshotDetails":finalObjArray};
+
+        fs.writeFileSync('screenshotDetails.json', JSON.stringify(finalJson));
+        }          
         await new Setup().runSteps(job_cmds,processor);
-        // await new Setup().sshIntoVM("cp /bakerx/screenshotDetails.json ~/screenshotDetails.json",processor);
-        // await new Setup().sshIntoVM("cp /bakerx/final.sh . ",processor);
-        // await new Setup().sshIntoVM("sed -i 's/\\r//g' final.sh",processor);
-        // await new Setup().sshIntoVM("bash final.sh "+ doc_json.jobs[index].iterations,processor);
+        if(job_name=="mutation-coverage"){
+        await new Setup().sshIntoVM("cp /bakerx/screenshotDetails.json ~/screenshotDetails.json",processor);
+        await new Setup().sshIntoVM("cp /bakerx/final.sh . ",processor);
+        await new Setup().sshIntoVM("sed -i 's/\\r//g' final.sh",processor);
+        await new Setup().sshIntoVM("bash final.sh "+ doc_json.jobs[index].iterations,processor);
+        }
     } 
     catch (e) 
     {
