@@ -16,7 +16,7 @@ class CreateDroplet{
 		let dropletId = await this.createDroplet(dropletName, region, imageName, sshFingerprint);
 		this.dropletContent['name'] = "root";
 		this.dropletContent['dropletId'] = dropletId.toString();
-		await this.dropletInfo(dropletId);
+		await this.dropletInfo(dropletName, dropletId);
 		// await this.deleteDroplet(dropletId);
 	}
 
@@ -111,7 +111,7 @@ class CreateDroplet{
         
 	}
 
-	async dropletInfo (id)
+	async dropletInfo (dropletName, id)
 	{
 		if( typeof id != "number" )
 		{
@@ -137,7 +137,7 @@ class CreateDroplet{
 			this.dropletContent['publicIP'] = this.publicIP.toString();
 			// Print out IP address
 			var jsonContent = JSON.stringify(this.dropletContent)
-			fs.writeFileSync("dropletContent.json", jsonContent, 'utf8', function (err) {     
+			fs.writeFileSync(dropletName+"_dropletContent.json", jsonContent, 'utf8', function (err) {     
 				if (err) {
 					console.log("An error occured while writing JSON Object to File.");
 					return console.log(err);

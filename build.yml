@@ -65,3 +65,36 @@ jobs:
       - name: store mutation screenshots in the folders created 
         run: mkdir mutation && cd mutation && mkdir upload && mkdir long && mkdir survey && mkdir variations
 
+  - name: itrust-deploy
+    deployment_file_path: iTrust2-v10/iTrust2/target/iTrust2-10.jar
+    vm_steps:
+      # - name: Copy web-srv file
+      #   run: cp /bakerx/web-srv .ssh/
+      # - name: Giving permissions to web-srv
+      #   run: chmod 600 .ssh/web-srv
+      # - name: Create jar file inside VM
+      #   run: cd iTrust2-v10/iTrust2/ && mvn package
+      - name: Copy jar file to the droplet
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" ~/iTrust2-v10/iTrust2/target/iTrust2-10.jar
+    droplet_steps:
+      #- name: ls
+      #  run: ls
+      - name: Update command
+        run: sudo apt-get update
+      - name: configure mysql password
+        run: echo "mysql-server mysql-server/root_password password abcd1234" | sudo debconf-set-selections
+      - name: configure mysql password
+        run: echo "mysql-server mysql-server/root_password_again password abcd1234" | sudo debconf-set-selections
+      - name: install mysql-server
+        run: sudo apt install -y mysql-server
+      - name: start mysql
+        run: sudo systemctl start mysql
+      - name: install JRE
+        run: sudo apt install default-jre -y
+      - name: install JDK
+        run: sudo apt install openjdk-11-jdk -y
+      - name: install Maven
+        run: sudo apt install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH
+      - name: execute jar file
+        run: java -jar iTrust2-10.jar > output.txt 2>&1 &
+
