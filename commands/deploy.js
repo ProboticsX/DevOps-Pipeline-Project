@@ -39,10 +39,10 @@ class Setup{
     {
         try{
 
-            console.log("sadbaskdb",job_cmds_droplet)
+            console.log("Commands",job_cmds_droplet)
             var delayInMilliseconds = 5000; //1 second
 
-            setTimeout(async function() {
+            //setTimeout(async function() {
 
                 execSync("chmod 600 web-srv", {stdio: ['inherit', 'inherit', 'inherit']});  
                 let configFile_droplet = fs.readFileSync(dropletName+'_dropletContent.json', (err) => {
@@ -69,7 +69,7 @@ class Setup{
                     execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
                 }
 
-            }, delayInMilliseconds);
+            //}, delayInMilliseconds);
 
 
             
@@ -80,6 +80,59 @@ class Setup{
         }
       
     }
+
+    async runProxySteps(proxy_steps, processor){
+        console.log("-----------------DEPLOYMENT on GREEN & BLUE SUCCESSFULL------------------")      
+
+        //await testingDeployment();
+        for(let i=0; i< proxy_steps.length;i++){
+            let command = proxy_steps[i].run;  
+            execSync(`${command}`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
+    }
+}
+
+async function testingDeployment(){
+
+    
+    try{
+
+        let configFile_droplet = fs.readFileSync(droplet_file_name[0]+'_dropletContent.json', (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+        });
+        
+        let configFile_droplet_green = JSON.parse(configFile_droplet);
+        let green = `curl http://${configFile_droplet_green.publicIP}:8080/iTrust2/login`;
+        await execSync(green, {stdio: ['inherit', 'inherit', 'inherit']});  
+    
+        
+        configFile_droplet = fs.readFileSync(droplet_file_name[1]+'_dropletContent.json', (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+        });
+        
+        let configFile_droplet_blue = JSON.parse(configFile_droplet);
+        let blue = `curl http://${configFile_droplet_blue.publicIP}:8080/iTrust2/login`;
+        await execSync(blue, {stdio: ['inherit', 'inherit', 'inherit']});  
+        
+        //  setTimeout(async function(){
+        
+        
+        //    }, 5000)
+    
+    }
+
+    catch(e){
+        console.log(e)
+    }
+
+
+    
 }
 
 exports.handler = async argv => {
@@ -106,22 +159,56 @@ exports.handler = async argv => {
 
         }
 
-        // execSync("touch sample.txt")
-        // execSync("start cmd /k echo Hello2")
-        // execSync("ipconfig")
-
         await new Setup().sshIntoVM("cp /bakerx/web-srv .ssh/", processor);
         await new Setup().sshIntoVM("chmod 600 .ssh/web-srv", processor);
-        execSync("chmod 600 web-srv", {stdio: ['inherit', 'inherit', 'inherit']});  
+        await execSync("chmod 600 web-srv", {stdio: ['inherit', 'inherit', 'inherit']});  
         await new Setup().sshIntoVM(`cd iTrust2-v10/iTrust2/ && mvn package `,processor);
 
         let job_cmds_vm = doc_json.jobs[index].vm_steps;         
         let job_cmds_droplet = doc_json.jobs[index].droplet_steps;
         
         for(let i=0; i< droplet_file_name.length;i++){
+            console.log("nextttttttttttttttttt")
             await new Setup().runSteps(job_cmds_droplet,job_cmds_vm,droplet_file_name[i], processor);
         }
+
+        console.log("heloooooooooooooo")
+        let job_cmds_proxy = doc_json.jobs[index].proxy_steps;
+        await new Setup().runProxySteps(job_cmds_proxy, processor);
+
+
+        //await execSync("pipeline serve",{stdio: ['inherit', 'inherit', 'inherit']}); 
+
+
+        //execSync("start cmd /k pipeline serve");
+
+        //execSync("nohup pipeline serve &", {stdio: ['inherit', 'inherit', 'inherit']});  
+
+        // console.log("hellooo")
         
+
+        // //execSync("pipeline serve", {stdio: ['inherit', 'inherit', 'inherit']});  
+        // console.log("hellooo")
+
+
+        // setTimeout(async function(){
+        //     //await new Setup().sshIntoVM(`echo hellooooooooo > output2.txt`, processor)
+        //     let configFile_droplet = fs.readFileSync(droplet_file_name[0]+'_dropletContent.json', (err) => {
+        //     if (err) {
+        //         console.error(err);
+        //         return;
+        //         }
+        //     });
+        //     let configFile_droplet_green = JSON.parse(configFile_droplet);
+        //     let siege_cmd = `siege http://${configFile_droplet_green.publicIP}:8080/iTrust2/login > output.txt 2>&1 &`;
+        //     await new Setup().sshIntoVM(siege_cmd, processor)
+            
+        // }, 10000)
+
+        
+
+
+        //await new Setup().sshIntoVM(`sudo apt install siege -y`, processor)
         
     } 
     catch (e) 
