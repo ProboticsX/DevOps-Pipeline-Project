@@ -1,35 +1,43 @@
-# README.md (Mutation Coverage)
+# README.md (Deployment)
 
 ### What progress we have made ✅
-This section aims to explain about the current progress that we have successfully completed after continuing from the M1.md
+This section aims to explain about the current progress that we have successfully completed after continuing from the M2.md
 
-- We have made changes to our project to utilise only one VM ```pipeline``` and dropped the idea of using ```ansible```
 - The provisioning and configuring of computing environment for ```pipeline``` was done successfully.
-- We performed the 1000 iterations using random mutation operators.
-- Triggering of build job ```pipeline build mutation-coverage build.yml``` was done successfully 
-- The result for each mutation involved details such as operator changed, pixel differences, line changed and the final result.
+- Creation of ```.jar``` file for iTrut deployment is done successfully.
+- Creation of blue and green droplets using the ``` pipeline prod up``` is done successfully.
+- ```inventory.json``` file to save the dropet information is created successfully.
+- Triggering of build job ```pipeline deploy inventory itrust-deploy build.yml``` is done successfully.
+- Deployment of iTrust using the blue-green stratergy is done successfully.
 
 The commands used for running the project are as follows:
 
 ``` 
 pipeline init
-pipeline build mutation-coverage build.yml
+pipeline build itrust-build build.yml
+pipeline prod up
+pipeline deploy inventory itrust-deploy build.yml
 ```
-1000 mutations completed
+Blue-Green droplets created
 
-![WhatsApp Image 2022-04-17 at 10 15 26 AM](https://media.github.ncsu.edu/user/22719/files/d35eef28-4cd8-4ab0-8ee0-7a6c3bc34484)
+<img width="577" alt="image" src="https://media.github.ncsu.edu/user/24819/files/14f05545-1867-4f7d-9b2e-f7a767199494">
 
-Reference folder : https://github.ncsu.edu/CSC-DevOps-S22/DEVOPS-18/tree/M2/referenceSnaps
+iTrust running on Green Server
 
-mutation folder: https://github.ncsu.edu/CSC-DevOps-S22/DEVOPS-18/tree/M2/mutation
+<img width="565" alt="image" src="https://media.github.ncsu.edu/user/24819/files/1d39b8ab-8e84-493f-ac97-8b51df164354">
 
-result file: https://github.ncsu.edu/CSC-DevOps-S22/DEVOPS-18/blob/M2/result
+iTrust running on Blue Server
+
+<img width="563" alt="image" src="https://media.github.ncsu.edu/user/24819/files/14e837a7-9e14-4aaf-8782-b6e5b3d9c1c5">
+
+
 
 
 ***Note***: Make sure that ```.env``` file is in the below format:
 ```
 Git_Token = <ENTER GITHUB TOKEN>
 mySQL_passwd = <ENTER MYSQL PASSWORD>
+DO_TOKEN = <ENTER DROPLET TOKEN>
 ```
 ### What challenges we had and what we learned from them 😎
 
@@ -45,34 +53,6 @@ mySQL_passwd = <ENTER MYSQL PASSWORD>
   - The issue faced here was that we were creating the ```marqdown-mod.js``` everytime we were running iteration.
   - Hence, we used ```git reset --hard``` to revert the changed ```.js``` to its original state.
 
-### File Structure 📁
-```
--> referenceSnaps
- -> ref_long.png
- -> ref_upload.png
- -> ref_variations.png
- -> ref_survey.png
- 
--> mutations
-  -> upload
-     -> 1.png
-     -> 2.png
-     -> 3.png
-  -> long
-     -> 1.png
-     -> 2.png
-     -> 3.png
-  -> variations
-     -> 1.png
-     -> 2.png
-     -> 3.png
-  -> survey
-     -> 1.png
-     -> 2.png
-     -> 3.png
-   ...
-```
-
 
 ### Team Contributions 👥	
 
@@ -83,7 +63,7 @@ mySQL_passwd = <ENTER MYSQL PASSWORD>
    
 ### Screencast
 
-Link: https://youtu.be/pzoK56wi7xw
+Link: https://youtu.be/AtTSL8XV8nE
 
 ## Contributors
 
