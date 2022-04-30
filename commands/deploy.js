@@ -8,7 +8,7 @@ const yaml = require('js-yaml');
 exports.command = 'deploy inventory <job_name> <build_yml>';
 exports.desc = 'Prepare tool';
 
-var droplet_file_name = ["sshubha-green","sshubha-blue"]
+var droplet_file_name = ["green","blue"]
 
 exports.builder = yargs => {
     yargs.options({
@@ -45,15 +45,16 @@ class Setup{
             //setTimeout(async function() {
 
                 execSync("chmod 600 web-srv", {stdio: ['inherit', 'inherit', 'inherit']});  
-                let configFile_droplet = fs.readFileSync(dropletName+'_dropletContent.json', (err) => {
+                let configFile_droplet = fs.readFileSync('inventory.json', (err) => {
                     if (err) {
                         console.error(err);
                         return;
                     }
                 });
-
+                
                 configFile_droplet = JSON.parse(configFile_droplet);
-
+                configFile_droplet = configFile_droplet[dropletName];
+                //console.log(configFile_droplet);
                 for(let i=0; i< job_cmds_vm.length;i++){
                     let command = job_cmds_vm[i].run;    
                     if(i == job_cmds_vm.length-1){
@@ -97,26 +98,19 @@ async function testingDeployment(){
     
     try{
 
-        let configFile_droplet = fs.readFileSync(droplet_file_name[0]+'_dropletContent.json', (err) => {
+        let configFile_droplet = fs.readFileSync('inventory.json', (err) => {
             if (err) {
                 console.error(err);
                 return;
             }
         });
         
-        let configFile_droplet_green = JSON.parse(configFile_droplet);
+        let configFile_droplet_green = JSON.parse(configFile_droplet)["green"];
         let green = `curl http://${configFile_droplet_green.publicIP}:8080/iTrust2/login`;
         await execSync(green, {stdio: ['inherit', 'inherit', 'inherit']});  
     
         
-        configFile_droplet = fs.readFileSync(droplet_file_name[1]+'_dropletContent.json', (err) => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-        });
-        
-        let configFile_droplet_blue = JSON.parse(configFile_droplet);
+        let configFile_droplet_blue = JSON.parse(configFile_droplet)["blue"];
         let blue = `curl http://${configFile_droplet_blue.publicIP}:8080/iTrust2/login`;
         await execSync(blue, {stdio: ['inherit', 'inherit', 'inherit']});  
         
@@ -172,8 +166,9 @@ exports.handler = async argv => {
             await new Setup().runSteps(job_cmds_droplet,job_cmds_vm,droplet_file_name[i], processor);
         }
 
-        console.log("heloooooooooooooo")
+        //console.log("heloooooooooooooo")
         let job_cmds_proxy = doc_json.jobs[index].proxy_steps;
+        await new Promise(resolve => setTimeout(resolve, 1000));
         await new Setup().runProxySteps(job_cmds_proxy, processor);
 
 

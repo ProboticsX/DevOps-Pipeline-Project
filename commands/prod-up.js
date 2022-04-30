@@ -18,8 +18,8 @@ exports.builder = yargs => {
 
 async function provisionDroplet(dropletName, region, imageName, sshFingerprint, processor){
 
-    await provision.init(dropletName, region, imageName, sshFingerprint);
-
+     var jsonContent = await provision.init(dropletName, region, imageName, sshFingerprint);
+     return jsonContent;
 }
 
 
@@ -32,8 +32,16 @@ exports.handler = async argv => {
 
     let sshFingerprint = await sshGeneration.generateSSH();
 
-    await provisionDroplet(dropletName1, region, imageName, sshFingerprint, processor)
-    await provisionDroplet(dropletName2, region, imageName, sshFingerprint, processor)    
+    var info1 = await provisionDroplet(dropletName1, region, imageName, sshFingerprint, processor)
+    var info2 = await provisionDroplet(dropletName2, region, imageName, sshFingerprint, processor)    
+    var result = '{\n"green":'+info1 + ',\n"blue":' + info2+'\n}';
+    console.log(result);
+    fs.writeFileSync("inventory.json", result, 'utf8', function (err) {     
+	    if (err) {
+		console.log("An error occured while writing JSON Object to File.");
+		return console.log(err);
+		}
+    });	
 
 };
 

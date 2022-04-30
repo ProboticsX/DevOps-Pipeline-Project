@@ -88,7 +88,7 @@ jobs:
       - name: install JDK
         run: sudo apt install openjdk-11-jdk -y
       - name: install Maven
-        run: sudo apt install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH
+        run: sudo apt install maven -y ; export PATH=/opt/apache-maven-3.6.3/bin:$PATH 
       - name: execute jar file
         run: java -jar iTrust2-10.jar > output.txt 2>&1 &
     proxy_steps:

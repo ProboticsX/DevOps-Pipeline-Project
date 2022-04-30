@@ -23,37 +23,41 @@ exports.handler = async argv => {
 };
 
 
-var droplet_file_name = ["sshubha-green","sshubha-blue"]
+global.TARGET = '';
+var GREEN = '';
+var BLUE = '';
 
-let configFile_droplet = fs.readFileSync(droplet_file_name[0]+'_dropletContent.json', (err) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-});
-
-let configFile_droplet_green = JSON.parse(configFile_droplet);
-const GREEN = `http://${configFile_droplet_green.publicIP}:8080/iTrust2`;
-
-
-configFile_droplet = fs.readFileSync(droplet_file_name[1]+'_dropletContent.json', (err) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-});
-
-let configFile_droplet_blue = JSON.parse(configFile_droplet);
-const BLUE  = `http://${configFile_droplet_blue.publicIP}:8080/iTrust2`;
-
-global.TARGET = GREEN;
-
-var count = 0;
 class Production
 {
     constructor()
     {
-        //this.TARGET = GREEN;
+        var droplet_file_name = ["sshubha-green","sshubha-blue"]
+        let configFile_droplet = fs.readFileSync(droplet_file_name[0]+'_dropletContent.json', (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+        });
+
+
+
+        let configFile_droplet_green = JSON.parse(configFile_droplet);
+       GREEN = `http://${configFile_droplet_green.publicIP}:8080/iTrust2`;
+
+
+        configFile_droplet = fs.readFileSync(droplet_file_name[1]+'_dropletContent.json', (err) => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+        });
+
+        let configFile_droplet_blue = JSON.parse(configFile_droplet);
+         BLUE  = `http://${configFile_droplet_blue.publicIP}:8080/iTrust2`;
+
+        TARGET = GREEN;
+
+        //TARGET = GREEN;
         this.count = 0;
         setInterval(this.healthCheck.bind(this), 5000 );
 
@@ -98,10 +102,10 @@ class Production
         console.log( chalk`{grey Health check on ${TARGET}}: ${status}`);
 
        if(response.statusCode == 200){
-           count = count+1;
+        this.count = this.count+1;
        }
 
-       console.log("Count:", count);
+       console.log("Count:", this.count);
 
        if(TARGET==GREEN && (response.statusCode == 500)){
            this.failover();
