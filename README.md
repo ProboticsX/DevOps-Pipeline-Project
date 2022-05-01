@@ -41,17 +41,17 @@ DO_TOKEN = <ENTER DROPLET TOKEN>
 ```
 ### What challenges we had and what we learned from them 😎
 
-- Error in capturing the snapshot in ```screenshot.js```
-  - While rendering the ```.js``` file after applying the mutations, we were not able to capture the snapshot of the changed ```.js``` file because of some syntax error since we applied some mutations in the file.
-  - Hence, we resolved the error using the ```try/catch``` clause so that the syntax error doesn't close the whole process.
+- Error in installing the dependencies in droplet via a vm 
+  - We initially tried to install the necessary dependdencies for iTrust in a droplet via a vm. However, multiple times there were connection time out error, or connection refused errors, we evene tried to use await and a promise.
+  - Hence, we resolved the error by installing the dependencies in the droplet from the host machine, instead of double ssh into droplet.
   
-- Rendering the 4 files using ```final.sh```
-  - The challenge faced here was while rendering the four files given to us, there was a major challenge in handling the ouputs for each iteration in ```build.yml```
-  - As a result, the whole logic for handling mutations was done in ```final.sh```
+- Exporting the iTrust project in a ```.jar``` or ```.war```
+  - The challenge faced here was that the ```.war``` file was created, but the issues arises with the new version of iTrust, and setting the correct path of Tomcat.
+  - As a result, we chose to use the ```.jar``` file to deploy iTrust.
 
-- Using ```git reset --hard```
-  - The issue faced here was that we were creating the ```marqdown-mod.js``` everytime we were running iteration.
-  - Hence, we used ```git reset --hard``` to revert the changed ```.js``` to its original state.
+- Creation of proxy server for blue-green deployment
+  - The issue faced here was that we were creating the proxy server, however there were issues with ip masking, for blue-green deployment.
+  - Hence, this was solved by properly using the proxy server and resolving the errors in it, so as to properly mask the ips.
 
 
 ### Team Contributions 👥	
