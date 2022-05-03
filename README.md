@@ -59,7 +59,8 @@ DO_TOKEN = <ENTER DROPLET TOKEN>
 
 ### Project board 🗒️
 
-![image](https://media.github.ncsu.edu/user/22719/files/3cbd4639-9cc8-4bcb-abd2-820857fa45eb)
+<img width="1434" alt="Screenshot 2022-05-02 at 11 10 18 PM" src="https://media.github.ncsu.edu/user/22460/files/77bbf262-73d1-45c1-ac4c-b9a3f4993ff6">
+
    
 ### Screencast
 
