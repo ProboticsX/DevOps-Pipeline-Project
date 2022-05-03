@@ -7,16 +7,20 @@ const chalk  = require('chalk');
 class GenerateSSH{
 
     async generateSSH(){    
+        
+        await execSync("rm -rf web-srv", {stdio: ['inherit', 'inherit', 'inherit']});
+
+        await execSync("rm -rf web-srv.pub", {stdio: ['inherit', 'inherit', 'inherit']});
+
         let ssh_command = `ssh-keygen -t rsa -b 4096 -C "web-srv" -f web-srv -N ""`;
 
-        execSync(ssh_command, {stdio: ['inherit', 'inherit', 'inherit']});
+        await execSync(ssh_command, {stdio: ['inherit', 'inherit', 'inherit']});
 
         return this.getContents();
     }
 
     async getContents(){
         let ssh_contents = fs.readFileSync("web-srv.pub", 'utf8');
-        console.log('ssh contents', ssh_contents);
 
         return this.getFingerprint(ssh_contents);
     }
