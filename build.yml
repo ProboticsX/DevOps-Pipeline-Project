@@ -1,53 +1,75 @@
 setup: 
   - sudo apt-get update -y
   - sudo apt-get install git wget -y
-  - rm -rf iTrust2-v10
-  - rm -rf checkbox.io-micro-preview
-  - rm -rf screenshot
-  - rm -rf referenceSnaps
   - sudo apt-get install -qq -y debconf-utils
   - export DEBIAN_FRONTEND="noninteractive"  
-  - echo \"mysql-server mysql-server/root_password password passwd\" | sudo debconf-set-selections
-  - echo \"mysql-server mysql-server/root_password_again password passwd\" | sudo debconf-set-selections
-  - sudo apt-get install maven -y ; export PATH=/opt/apache-maven-3.8.4/bin:$PATH 
+  - sudo apt install jq -y 
   - sudo apt install nodejs -y
   - sudo apt install npm -y  
-  - sudo apt install jq -y 
-  - sudo apt-get install -y nodejs jq npm imagemagick chromium-browser
-  # - sudo service mysql start 
  
 Variable:
   - DEBIAN_FRONTEND="noninteractive"
 
 jobs:
   - name: itrust-build
+    clone:
+      - name: remove iTrust if it already exists
+        run: rm -rf iTrust2-v10
+      - name: clone itrust
+        run: git clone https://token@github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git
+    sql_setup:
+      - name: Setup SQL
+        run: echo \"mysql-server mysql-server/root_password password passwd\" | sudo debconf-set-selections
+      - name: SQL 
+        run: echo \"mysql-server mysql-server/root_password_again password passwd\" | sudo debconf-set-selections
+      - name: create application.yml file
+        run: cp iTrust2-v10/iTrust2/src/main/resources/application.yml.template iTrust2-v10/iTrust2/src/main/resources/application.yml 
+      - name: set password in application.yml
+        run: sed -i 's/password\:/password\:\ passwd/g' iTrust2-v10/iTrust2/src/main/resources/application.yml
+      - name: install mysql
+        run: sudo apt-get install -y mysql-server   
     steps: 
+      - name: Install Maven
+        run: sudo apt-get install maven -y
+      - name: Set path
+        run: export PATH=/opt/apache-maven-3.8.4/bin:$PATH
       - name: install JRE
         run: sudo apt-get install default-jre -y
       - name: install JDK
-        run: sudo apt-get install openjdk-11-jdk -y 
-      - name: install mysql
-        run: sudo apt-get install -y mysql-server         
-      - name: create application.yml file
-        run: cp iTrust2-v10/iTrust2/src/main/resources/application.yml.template iTrust2-v10/iTrust2/src/main/resources/application.yml
-      - name: set password in application.yml
-        run: sed -i 's/password\:/password\:\ passwd/g' iTrust2-v10/iTrust2/src/main/resources/application.yml
+        run: sudo apt-get install openjdk-11-jdk -y     
       - name: test iTrust1
         run: cd iTrust2-v10/iTrust2 && mvn --batch-mode --update-snapshots clean test
+
   - name: mutation-coverage
-    iterations: 1000
+    iterations: 2
     snapshots:
       - http://localhost:3000/survey/upload.md
       - http://localhost:3000/survey/long.md
       - http://localhost:3000/survey/survey.md
       - http://localhost:3000/survey/variations.md
-    steps:
-      - name: clone microservice
-        run: git clone microServiceGitUrl
-      - name: clone Snapshot utility
-        run: git clone snapshotGitUrl
+    clone:
+      - name: remove checkbox.io-micro-preview if it already exists
+        run: rm -rf checkbox.io-micro-preview
+      - name: remove screenshot if it already exists
+        run: rm -rf screenshot
+      - name: remove referenceSnaps if it already exists
+        run:  rm -rf referenceSnaps
+      - name: clone checkbox micro-preview
+        run: git clone https://token@github.com/chrisparnin/checkbox.io-micro-preview
+      - name: clone screenshot
+        run: git clone https://token@github.com/ruttabega/screenshot
+    send_files_to_vm:
+      - name: copy screenshot.json
+        run: cp /bakerx/screenshotDetails.json ~/screenshotDetails.json"
+      - name: copy final.sh
+        run: cp /bakerx/final.sh . 
+      - name: replace in final.sh
+        run:  sed -i 's/\\r//g' final.sh
       - name: copy screenshot.js
         run: cp -f /bakerx/screenshot.js  /home/vagrant/screenshot/screenshot.js
+    steps:
+      - name: Installations
+        run: sudo apt-get install -y imagemagick chromium-browser
       - name: setup snapshot
         run: cd screenshot && npm i && sudo npm link
       - name: run service
@@ -67,22 +89,32 @@ jobs:
 
   - name: itrust-deploy
     deployment_file_path: iTrust2-v10/iTrust2/target/iTrust2-10.jar
-    vm_steps:
-      - name: Install siege
+    application_name: iTrust2
+    end_point: iTrust2/login
+    execute_permission:
+      - name: permit web-srv
+        run: chmod 600 web-srv
+    vm_steps: 
+      - name: copy web-srv
+        run: cp /bakerx/web-srv .ssh/
+      - name: permit web-srv in VM
+        run: chmod 600 .ssh/web-srv
+      - name: package application
+        run: cd iTrust2-v10/iTrust2/ && mvn package
+      - name: install seige
         run: sudo apt install siege -y
-      - name: Copy jar file to the droplet
-        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" ~/iTrust2-v10/iTrust2/target/iTrust2-10.jar
+    sql_setup:
+      - name: configure mysql password
+        run: echo "mysql-server mysql-server/root_password password passwd" | sudo debconf-set-selections
+      - name: configure mysql password
+        run: echo "mysql-server mysql-server/root_password_again password passwd" | sudo debconf-set-selections
+      - name: install mysql-server
+        run: sudo apt-get install -y mysql-server
+      - name: start mysql
+        run: sudo systemctl start mysql
     droplet_steps:
       - name: Update command
         run: sudo apt-get update
-      - name: configure mysql password
-        run: echo "mysql-server mysql-server/root_password password abcd1234" | sudo debconf-set-selections
-      - name: configure mysql password
-        run: echo "mysql-server mysql-server/root_password_again password abcd1234" | sudo debconf-set-selections
-      - name: install mysql-server
-        run: sudo apt install -y mysql-server
-      - name: start mysql
-        run: sudo systemctl start mysql
       - name: install JRE
         run: sudo apt install default-jre -y
       - name: install JDK
