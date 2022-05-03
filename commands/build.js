@@ -3,135 +3,64 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const child_process = require("child_process");
 const execSync = require('child_process').execSync;
-exports.command = 'build <job_name> <build_yml>';
 const os = require('os');
 const { options } = require("yargs");
+
+const configFile = require("../lib/config");
+const mutationBuild = require("../lib/mutationBuild");
+
+const angularJest = require("../")
+
 require('dotenv').config();
 
-
-
-class Setup{
-    // Executing the commands in VM via ssh
-    async sshIntoVM(command,processor) {
-        let configFile = fs.readFileSync('VM_Info.json', (err) => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-        });
-      
-        
-    let vm_ssh = null
-    configFile = JSON.parse(configFile);
-    if(processor == "Intel/Amd64")
-    {
-        vm_ssh = `ssh -i "${configFile.private_key}" ${configFile.user}@${configFile.hostname} -p ${configFile.port} -o StrictHostKeyChecking=no `;
-    }
-    else
-    {
-        vm_ssh = `ssh -i "${configFile.identifyFile}" -p ${configFile.port} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${configFile.User}@${configFile.HostName}`;
-    }
-    
-     
-    let token = process.env.Git_Token
-
-    let passwd = process.env.mySQL_passwd
-    command = command.replace('passwd', passwd);
-
-    let microServiceUrl = `https://${token}@github.com/chrisparnin/checkbox.io-micro-preview`
-    command = command.replace('microServiceGitUrl', microServiceUrl);
-
-    let snapshotGitUrl = `https://${token}@github.com/ruttabega/screenshot`
-    command = command.replace('snapshotGitUrl', snapshotGitUrl);
-
-    command = command.replace("\r","");
-    console.log('vm ssh :::',vm_ssh,':::',command);
-        execSync(`${vm_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']});       
-    }    
-
-    // Run the commands in the setup part of build.yml
-    async runSetup(setup_cmds,processor)
-    {               
-        for(let i=0; i< setup_cmds.length;i++)
-        {
-            let command = setup_cmds[i];
-            await this.sshIntoVM(command,processor);                
-        }
-    }
-
-    
-    async runClone(setup_cmds,processor){
-        await this.sshIntoVM(setup_cmds,processor);
-    }
-
-    // Run the commands for the specific job of build.yml
-    async runSteps(job_cmds,processor)
-    {      
-      for(let i=0; i< job_cmds.length;i++)
-      {
-          let command = job_cmds[i].run;            
-          await this.sshIntoVM(command,processor);                
-      }
-      
-    }
-}
+exports.command = 'build <job_name> <build_yml>';
 
 exports.handler = async argv => {
-    const { job_name, build_yml,processor} = argv;
+    const { job_name, build_yml} = argv;
     try 
     {
-        let token = process.env.Git_Token
-        const doc = yaml.load(fs.readFileSync(build_yml, 'utf8'));                
-        let doc_json = JSON.parse(JSON.stringify(doc)); // Parsing build.yml file
+        
+        //reading the build.yml file
+        let buildYamlFile = await configFile.readBuildYaml(build_yml);
 
+        //running setup
+
+        await configFile.runSetupSteps(buildYamlFile.setup);
+
+
+        // Determining the index of job to execute based on the job name passed in the command line.
         var index = -1;
-        for(let i=0; i< doc_json.jobs.length;i++)
+        for(let i=0; i< buildYamlFile.jobs.length;i++)
         {
-            if(job_name == doc_json.jobs[i].name) // Determining the index of job to execute based on the job name passed in the command line.
+            if(job_name == buildYamlFile.jobs[i].name) 
             {
                 index = i;
             }
         }
-        if(job_name=="itrust-build") {
-        let setup_cmds = doc_json.setup;        
-        await new Setup().runSetup(setup_cmds,processor);
-
-        let clone_cmds = `git clone https://${token}@github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git`
-
-        await new Setup().runClone(clone_cmds,processor);
         if(index==-1){
             return;
         }
-    }
 
-        let job_cmds = doc_json.jobs[index].steps;  
+        if(job_name=="itrust-build") {
 
-        if(job_name == "mutation-coverage") {
+            let cloneCommands = buildYamlFile.jobs[index].clone;  
+            await configFile.runCloneSteps(cloneCommands);
 
-        let snapshotDetails = doc_json.jobs[index].snapshots;
+            let sqlSetupSteps = buildYamlFile.jobs[index].sql_setup;   
+            await configFile.runSQLSetupSteps(sqlSetupSteps);
 
-        let finalObjArray = [];
-
-        for(let i=0; i<snapshotDetails.length;i++){
-            let jobDetails = snapshotDetails[i].split('/');
-
-            let object = {};
-            object["fileName"] = jobDetails[4].split('.')[0];
-            object["fileUrl"] = snapshotDetails[i];
-
-            finalObjArray.push(object);
+            let runSteps = buildYamlFile.jobs[index].steps;   
+            await configFile.runSteps(runSteps);
+        
         }
 
-        let finalJson = {"screenshotDetails":finalObjArray};
+        if(job_name=="mutation-coverage") {
 
-        fs.writeFileSync('screenshotDetails.json', JSON.stringify(finalJson));
-        }          
-        await new Setup().runSteps(job_cmds,processor);
-        if(job_name=="mutation-coverage"){
-        await new Setup().sshIntoVM("cp /bakerx/screenshotDetails.json ~/screenshotDetails.json",processor);
-        await new Setup().sshIntoVM("cp /bakerx/final.sh . ",processor);
-        await new Setup().sshIntoVM("sed -i 's/\\r//g' final.sh",processor);
-        await new Setup().sshIntoVM("bash final.sh "+ doc_json.jobs[index].iterations,processor);
+            await mutationBuild.cloneMutationRepositories(buildYamlFile,index);
+            await mutationBuild.createFinalJSON(buildYamlFile,index);
+            await mutationBuild.sendFilesToVM();
+            await mutationBuild.runMutation(buildYamlFile, index);
+        
         }
     } 
     catch (e) 
@@ -140,3 +69,5 @@ exports.handler = async argv => {
     }
    
 };
+
+
