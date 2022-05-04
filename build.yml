@@ -137,10 +137,13 @@ jobs:
         run: cd spring-petclinic && mvn package
 
   - name: pet-deploy
+    end_point: ""
     execute_permission:
       - name: permit web-srv
         run: chmod 600 web-srv
     vm_steps: 
+      - name: install seige
+        run: sudo apt install siege -y
       - name: copy web-srv
         run: cp /bakerx/web-srv .ssh/
       - name: permit web-srv in VM
@@ -153,12 +156,32 @@ jobs:
       - name: install JDK
         run: sudo apt-get install openjdk-11-jdk -y 
       - name: run jar file
-        run: java -jar spring-petclinic-2.6.0-SNAPSHOT.jar
+        run: java -jar spring-petclinic-2.6.0-SNAPSHOT.jar > output.txt 2>&1 &
   
   - name: pet-test
     steps:
       - name: Testing command
         run: cd spring-petclinic && mvn clean test
+
+  - name: pet-analysis
+    steps:
+      - name: Install cloc 
+        run: cd spring-petclinic &&  sudo npm i -g cloc
+      - name: Run cloc 
+        run: cd spring-petclinic &&  cloc .
+      - name: Remove the file if it already exists
+        run: rm -rf pmd-bin-6.45.0.zip
+      - name: Remove the folder if it already exists
+        run: rm -rf pmd-bin-6.45.0
+      - name: Download the zip file
+        run: wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.45.0/pmd-bin-6.45.0.zip
+      - name: Download unzip
+        run: sudo apt-get install unzip
+      - name: Unzip the .zip file
+        run: unzip pmd-bin-6.45.0.zip
+      - name: Run pmd for analysis
+        run: cd pmd-bin-6.45.0/bin/ && ./run.sh pmd -d ~/spring-petclinic/src/main/java/org/springframework/samples/petclinic/ -f text -R rulesets/java/quickstart.xml
+
 
   - name: angular-build
     steps:
@@ -180,10 +203,13 @@ jobs:
         run: cd angular-demo-travelapp && ng build --prod
     
   - name: angular-deploy
+    end_point: ""
     execute_permission:
       - name: permit web-srv
         run: chmod 600 web-srv
     vm_steps: 
+      - name: install seige
+        run: sudo apt install siege -y
       - name: copy web-srv
         run: cp /bakerx/web-srv .ssh/
       - name: permit web-srv in VM
@@ -216,3 +242,21 @@ jobs:
         run: cd angular-demo-travelapp && sudo apt-get -y install chromium-browser
       - name: export command
         run: cd angular-demo-travelapp && export CHROME_BIN='/usr/bin/chromium-browser' && ng test
+
+  - name: angular-analysis
+    steps:
+      - name: Install cloc 
+        run: cd angular-demo-travelapp &&  sudo npm i -g cloc
+      - name: Run cloc 
+        run: cd angular-demo-travelapp &&  cloc .
+      - name: Copy command
+        run: cp /bakerx/analysis-vm.js angular-demo-travelapp/
+      - name: Run command
+        run: cd angular-demo-travelapp && node analysis-vm.js e2e/protractor.conf.js && node analysis-vm.js karma.conf.js
+      - name: Lint command
+        run: cd angular-demo-travelapp && ng lint
+      - name: Downloading lint packages
+        run: cd angular-demo-travelapp && ng g library corelib
+      - name: Making sure linting of corelib happens successfully
+        run: cd angular-demo-travelapp && ng lint corelib
+      

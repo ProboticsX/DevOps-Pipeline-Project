@@ -92,8 +92,7 @@ exports.handler = async argv => {
 
         let endPoint = buildYamlFile.jobs[index].end_point;
         console.log("-----------------Starting Proxy!-----------------")
-        //await new Promise(resolve => setTimeout(resolve, 2000));
-        await proxyConfig.runProxy(inventoryFile, endPoint);
+        await proxyConfig.runProxy(inventoryFile, endPoint, 0);
 
     }
 
@@ -114,18 +113,27 @@ exports.handler = async argv => {
             await configFile.sshIntoVM(`${command}`); 
         }
 
-        let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
-        let tempInventoryFile = inventoryFile[dropletNames[0]];
+        for(let i=0;i<dropletNames.length;i++){
+        
+            let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
+            let tempInventoryFile = inventoryFile[dropletNames[i]];
 
-        await configFile.sshIntoVM(`scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" spring-petclinic/target/spring-petclinic-2.6.0-SNAPSHOT.jar  ${tempInventoryFile.name}@${tempInventoryFile.publicIP}:~ `);
+            
+            await configFile.sshIntoVM(`scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" spring-petclinic/target/spring-petclinic-2.6.0-SNAPSHOT.jar  ${tempInventoryFile.name}@${tempInventoryFile.publicIP}:~ `);
 
-        let droplet_ssh = null;
-        droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+            let droplet_ssh = null;
+            droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
 
-        for(let i=0; i< dropletStepsCommand.length;i++){
-            let command = dropletStepsCommand[i].run;  
-            execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+            for(let i=0; i< dropletStepsCommand.length;i++){
+                let command = dropletStepsCommand[i].run;  
+                execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+            }
         }
+
+        let endPoint = buildYamlFile.jobs[index].end_point;
+        console.log("-----------------Starting Proxy!-----------------")
+        await proxyConfig.runProxy(inventoryFile, endPoint, 1);
+        
 
     }
 
@@ -147,20 +155,27 @@ exports.handler = async argv => {
             await configFile.sshIntoVM(`${command}`); 
         }
 
-        let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
-        let tempInventoryFile = inventoryFile[dropletNames[0]];
+        for(let i=0;i<dropletNames.length;i++){
+            let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
+            let tempInventoryFile = inventoryFile[dropletNames[0]];
 
 
-        let droplet_ssh = null;
-        droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+            let droplet_ssh = null;
+            droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
 
-        for(let i=0; i< dropletStepsCommand.length;i++){
-            let command = dropletStepsCommand[i].run;  
-            execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+            for(let i=0; i< dropletStepsCommand.length;i++){
+                let command = dropletStepsCommand[i].run;  
+                execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+            }
+
+            await configFile.sshIntoVM(`scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" angular-demo-travelapp/dist/angularDemo/* ${tempInventoryFile.name}@${tempInventoryFile.publicIP}:/var/www/html/`);
+
         }
 
-        await configFile.sshIntoVM(`scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" angular-demo-travelapp/dist/angularDemo/* ${tempInventoryFile.name}@${tempInventoryFile.publicIP}:/var/www/html/`);
-
+        
+        let endPoint = buildYamlFile.jobs[index].end_point;
+        console.log("-----------------Starting Proxy!-----------------")
+        await proxyConfig.runProxy(inventoryFile, endPoint, 2);
 
     }
 };
