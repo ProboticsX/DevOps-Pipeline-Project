@@ -35,12 +35,7 @@ exports.handler = async argv => {
         return;
     }
 
-    let permitCommands = buildYamlFile.jobs[index].execute_permission;
 
-    for(let i=0; i< permitCommands.length;i++){
-        let command = permitCommands[i].run;  
-        await execSync(`${command}`, {stdio: ['inherit', 'inherit', 'inherit']}); 
-    }
 
     //read inventory
     let inventoryFile = fs.readFileSync('inventory.json', (err) => {
@@ -54,6 +49,13 @@ exports.handler = async argv => {
     inventoryFile = JSON.parse(inventoryFile);
 
     if(job_name=="itrust-deploy"){
+
+        let permitCommands = buildYamlFile.jobs[index].execute_permission;
+
+        for(let i=0; i< permitCommands.length;i++){
+            let command = permitCommands[i].run;  
+            await execSync(`${command}`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
 
         let vmCommands = buildYamlFile.jobs[index].vm_steps;
 
@@ -92,6 +94,73 @@ exports.handler = async argv => {
         console.log("-----------------Starting Proxy!-----------------")
         //await new Promise(resolve => setTimeout(resolve, 2000));
         await proxyConfig.runProxy(inventoryFile, endPoint);
+
+    }
+
+    if(job_name=="pet-deploy"){
+
+        let permitCommands = buildYamlFile.jobs[index].execute_permission;
+
+        for(let i=0; i< permitCommands.length;i++){
+            let command = permitCommands[i].run;  
+            await execSync(`${command}`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
+
+        
+        let vmCommands = buildYamlFile.jobs[index].vm_steps;
+
+        for(let i=0; i< vmCommands.length;i++){
+            let command = vmCommands[i].run;  
+            await configFile.sshIntoVM(`${command}`); 
+        }
+
+        let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
+        let tempInventoryFile = inventoryFile[dropletNames[0]];
+
+        await configFile.sshIntoVM(`scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" spring-petclinic/target/spring-petclinic-2.6.0-SNAPSHOT.jar  ${tempInventoryFile.name}@${tempInventoryFile.publicIP}:~ `);
+
+        let droplet_ssh = null;
+        droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+
+        for(let i=0; i< dropletStepsCommand.length;i++){
+            let command = dropletStepsCommand[i].run;  
+            execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
+
+    }
+
+
+    if(job_name=="angular-deploy"){
+
+        let permitCommands = buildYamlFile.jobs[index].execute_permission;
+
+        for(let i=0; i< permitCommands.length;i++){
+            let command = permitCommands[i].run;  
+            await execSync(`${command}`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
+
+        
+        let vmCommands = buildYamlFile.jobs[index].vm_steps;
+
+        for(let i=0; i< vmCommands.length;i++){
+            let command = vmCommands[i].run;  
+            await configFile.sshIntoVM(`${command}`); 
+        }
+
+        let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
+        let tempInventoryFile = inventoryFile[dropletNames[0]];
+
+
+        let droplet_ssh = null;
+        droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+
+        for(let i=0; i< dropletStepsCommand.length;i++){
+            let command = dropletStepsCommand[i].run;  
+            execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
+
+        await configFile.sshIntoVM(`scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" angular-demo-travelapp/dist/angularDemo/* ${tempInventoryFile.name}@${tempInventoryFile.publicIP}:/var/www/html/`);
+
 
     }
 };

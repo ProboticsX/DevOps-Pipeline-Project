@@ -8,8 +8,9 @@ const { options } = require("yargs");
 
 const configFile = require("../lib/config");
 const mutationBuild = require("../lib/mutationBuild");
+const petBuild = require("../lib/petBuild");
+const angularBuild = require("../lib/angularBuild");
 
-const angularJest = require("../")
 
 require('dotenv').config();
 
@@ -61,6 +62,15 @@ exports.handler = async argv => {
             await mutationBuild.sendFilesToVM();
             await mutationBuild.runMutation(buildYamlFile, index);
         
+        }
+
+        
+        if(job_name == "pet-build"){
+            await petBuild.runPetSteps(buildYamlFile, index);
+        }
+
+        if(job_name == "angular-build"){
+            await angularBuild.runAngularSteps(buildYamlFile, index);
         }
     } 
     catch (e) 

@@ -126,3 +126,93 @@ jobs:
     proxy_steps:
       - name: Run the proxy server
         run: pipeline serve
+
+  - name: pet-build
+    steps:
+      - name: Remove folder
+        run: rm -rf spring-petclinic
+      - name: Git Clone
+        run: git clone https://github.com/spring-projects/spring-petclinic.git
+      - name: Create jar file
+        run: cd spring-petclinic && mvn package
+
+  - name: pet-deploy
+    execute_permission:
+      - name: permit web-srv
+        run: chmod 600 web-srv
+    vm_steps: 
+      - name: copy web-srv
+        run: cp /bakerx/web-srv .ssh/
+      - name: permit web-srv in VM
+        run: chmod 600 .ssh/web-srv
+    droplet_steps:
+      - name: Updating command
+        run: sudo apt-get update -y
+      - name: install JRE
+        run: sudo apt-get install default-jre -y
+      - name: install JDK
+        run: sudo apt-get install openjdk-11-jdk -y 
+      - name: run jar file
+        run: java -jar spring-petclinic-2.6.0-SNAPSHOT.jar
+  
+  - name: pet-test
+    steps:
+      - name: Testing command
+        run: cd spring-petclinic && mvn clean test
+
+  - name: angular-build
+    steps:
+      - name: remove iTrust if it already exists
+        run: rm -rf angular-demo-travelapp
+      - name: clone itrust
+        run: git clone https://github.com/nivmprasad/angular-demo-travelapp.git
+      - name: npm install
+        run: cd angular-demo-travelapp && sudo npm install
+      - name: npm cache clean
+        run: cd angular-demo-travelapp && sudo npm cache clean -f
+      - name: n install
+        run: cd angular-demo-travelapp && sudo npm install -g n
+      - name: n install
+        run: cd angular-demo-travelapp && sudo n stable
+      - name: Angular install
+        run: cd angular-demo-travelapp && sudo npm install -g @angular/cli -y
+      - name: Update NG
+        run: cd angular-demo-travelapp && ng build --prod
+    
+  - name: angular-deploy
+    execute_permission:
+      - name: permit web-srv
+        run: chmod 600 web-srv
+    vm_steps: 
+      - name: copy web-srv
+        run: cp /bakerx/web-srv .ssh/
+      - name: permit web-srv in VM
+        run: chmod 600 .ssh/web-srv
+    droplet_steps:
+      - name: allow openssh
+        run: sudo ufw allow openssh
+      - name: enable
+        run: sudo ufw enable 
+      - name: ufw status
+        run: sudo ufw status
+      - name: update
+        run: sudo apt-get update
+      - name: nginx
+        run: sudo apt-get install nginx 
+      - name: allow 443
+        run: sudo ufw allow 443
+      - name: allow 80
+        run: sudo ufw allow 80
+      - name: status nginx
+        run: systemctl status nginx
+      - name: giving access
+        run: sudo chmod -R 755 /var/www
+
+  - name: angular-test
+    steps:
+      - name: Copy command
+        run: cp /bakerx/karma.conf.js angular-demo-travelapp/
+      - name: Install browser
+        run: cd angular-demo-travelapp && sudo apt-get -y install chromium-browser
+      - name: export command
+        run: cd angular-demo-travelapp && export CHROME_BIN='/usr/bin/chromium-browser' && ng test
