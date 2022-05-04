@@ -8,7 +8,7 @@ pipeline build angular-build angular-build.yml
 pipeline test angular-build.yml
 pipeline code-coverage angular-build.yml
 pipeline prod up
-pipeline deploy inventory angular-build angular-build.yml
+pipeline deploy inventory angular-deploy angular-build.yml
 ```
 
 
@@ -20,5 +20,5 @@ pipeline build java-build java-build.yml
 pipeline test java-build.yml
 pipeline code-coverage java-build.yml
 pipeline prod up
-pipeline deploy inventory java-build java-build.yml
+pipeline deploy inventory java-deploy java-build.yml
 ```
