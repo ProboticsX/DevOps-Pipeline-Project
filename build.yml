@@ -126,3 +126,214 @@ jobs:
     proxy_steps:
       - name: Run the proxy server
         run: pipeline serve
+
+  - name: F0_build
+    steps:
+      - name: Remove soMedia
+        run: rm -rf soMedia
+      - name: Install python 3.0
+        run: sudo apt install python3.8
+      - name: Clone the Django Project
+        run: git clone https://github.com/MeNsaaH/soMedia.git
+      - name: Update Apt
+        run: sudo apt update
+      - name: Install pip
+        run: sudo apt install python3-pip
+      - name: Install enviornment
+        run:  cd soMedia && sudo apt install python3.8-venv
+      - name: Create enviornment
+        run: cd soMedia && python3 -m venv venv/
+      - name: Activate enviornment
+        run: cd soMedia && source venv/bin/activate
+      - name: Install django
+        run: python3 -m pip install django==2.2.13
+      - name: Install pillow
+        run: cd soMedia && pip install pillow
+      - name: Install pytz
+        run: python3 -m pip install pytz==2019.1
+      - name: Install sqlparse
+        run: python3 -m pip install sqlparse==0.3.0  
+      
+  - name: F0_test
+    steps:
+      - name: Run tests
+        run: cd soMedia && python3 manage.py test  
+    
+  - name: F0_deploy
+    execute_permission:
+      - name: permit web-srv
+        run: chmod 600 web-srv
+    vm_steps:
+      - name: copy web-srv
+        run: cp /bakerx/web-srv .ssh/
+      - name: permit web-srv in VM
+        run: chmod 600 .ssh/web-srv
+      - name: Copy cloud_agent/index.js from shared folder
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" -r /bakerx/agent/ droplet_path:~
+      - name: copy inventory
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" -r /bakerx/inventory.json droplet_path:~/agent/
+    droplet_steps:
+      - name: Remove soMedia
+        run: rm -rf soMedia
+      - name: Install python 3.0
+        run: sudo apt install python3.8
+      - name: Clone the Django Project
+        run: git clone https://github.com/MeNsaaH/soMedia.git
+      - name: Update Apt
+        run: sudo apt update
+      - name: Install pip
+        run: sudo apt install python3-pip
+      - name: Install enviornment
+        run:  cd soMedia && sudo apt install python3.8-venv
+      - name: Create enviornment
+        run: cd soMedia && python3 -m venv venv/
+      - name: Activate enviornment
+        run: cd soMedia && source venv/bin/activate
+      - name: Install django
+        run: python3 -m pip install django==2.2.13
+      - name: Install pillow
+        run: python3 -m pip install install pillow
+      - name: Install pytz
+        run: python3 -m pip install pytz==2019.1
+      - name: Install sqlparse
+        run: python3 -m pip install sqlparse==0.3.0 
+      - name: Make migrations
+        run: cd soMedia && python3 manage.py makemigrations
+      - name: Migrate
+        run: cd soMedia && python3 manage.py migrate 
+      - name: Run the django webapp
+        run: cd soMedia && python3 manage.py runserver 0.0.0.0:8000 
+
+
+  - name: react_stats
+    execute_permission:
+      - name: permit web-srv
+        run: chmod 600 web-srv
+    monitor_steps:
+      - name: apt update
+        run: sudo apt-get update
+      - name: Install nodejs 
+        run: sudo apt install nodejs
+      - name: Install npm
+        run: sudo apt install npm -y
+      - name: Install forever
+        run: sudo npm install forever -g
+      - name: Install redis server
+        run: sudo apt-get install redis-server -y
+      - name: Install packages
+        run: cd agent && npm install
+      - name: NPM link
+        run: cd agent && npm link
+      - name: Stop all process
+        run: cd agent && forever stopall
+      - name: Run the process
+        run: cd agent && node agent.js react_app
+
+  - name: django_stats
+    execute_permission:
+      - name: permit web-srv
+        run: chmod 600 web-srv
+    monitor_steps:
+      - name: apt update
+        run: sudo apt-get update
+      - name: Install nodejs 
+        run: sudo apt install nodejs
+      - name: Install npm
+        run: sudo apt install npm -y
+      - name: Install forever
+        run: sudo npm install forever -g
+      - name: Install redis server
+        run: sudo apt-get install redis-server -y
+      - name: Install packages
+        run: cd agent && npm install
+      - name: NPM link
+        run: cd agent && npm link
+      - name: Stop all process
+        run: cd agent && forever stopall
+      - name: Run the process
+        run: cd agent && node agent.js django_app
+
+  - name: vehicle-build
+    steps:
+      - name: Remove old repo
+        run:  rm -rf search_filter
+      - name: Clone the repository
+        run:  git clone https://token@github.com/GavBaros/search_filter.git
+      - name: Install requirements
+        run: cd search_filter && npm install
+      - name: Run build
+        run: cd search_filter && npm run build
+
+  - name: vehicle-test
+    steps:
+      - name: Run tests
+        run: cd search_filter && CI=true npm test 
+
+  - name: vehicle-deploy
+    execute_permission:
+      - name: permit web-srv
+        run: chmod 600 web-srv
+    vm_steps:
+      - name: copy web-srv
+        run: cp /bakerx/web-srv .ssh/
+      - name: permit web-srv in VM
+        run: chmod 600 .ssh/web-srv
+      - name: Copy cloud_agent/index.js from shared folder
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" -r /bakerx/agent/ droplet_path:~
+      - name: copy inventory
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" -r /bakerx/inventory.json droplet_path:~/agent/
+      - name: Copying the repository to the droplet
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" -r search_filter/build/ droplet_path:~
+    droplet_steps:
+      - name: Apt update
+        run: sudo apt-get update -y
+      - name: Install requirements
+        run: sudo apt-get install npm -y && sudo npm install && npm install -g serve
+      - name: Run the application
+        run: serve -s build
+
+  - name: monitor-deploy
+    execute_permission:
+      - name: permit web-srv
+        run: chmod 600 web-srv
+    vm_steps: 
+      - name: copy web-srv
+        run: cp /bakerx/web-srv .ssh/
+      - name: permit web-srv in VM
+        run: chmod 600 .ssh/web-srv
+      - name: Copy redis.conf from shared folder
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" /bakerx/redis.conf droplet_path:~
+      - name: Copy Dashboard folder in the droplet
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" -r /bakerx/Monitoring/dashboard droplet_path:~
+      - name: Add 
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" -r /bakerx/Monitoring/dashboard/package.json droplet_path:~
+      - name: Copy inventory.json
+        run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv" -r /bakerx/inventory.json droplet_path:~
+    droplet_steps:
+      - name: apt update
+        run: sudo apt-get update
+      - name: Install nodejs 
+        run: sudo apt install nodejs
+      - name: Install npm
+        run: sudo apt install npm -y
+      - name: Install forever
+        run: sudo npm install forever -g
+      - name: Install redis server
+        run: sudo apt-get install redis-server -y
+      - name: Start redis server
+        run: sudo service redis-server stop ; sudo service redis-server start
+      - name: Copy redis.conf from home to the required location in redis
+        run: cp /root/redis.conf /etc/redis/
+      - name: Restart redis server
+        run: sudo service redis-server restart
+      # - name: Copy Dashboard folder in the droplet
+      #   run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv " -r /bakerx/Monitoring/dashboard root@137.184.29.29:~
+      - name: npm install for dashboard
+        run: bash -c "cd dashboard ; npm install"
+      - name: run 
+        run: cd dashboard && node bin/www 
+    
+
+
+
+

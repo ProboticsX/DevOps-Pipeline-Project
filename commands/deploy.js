@@ -88,10 +88,150 @@ exports.handler = async argv => {
             }
         }
 
+
         let endPoint = buildYamlFile.jobs[index].end_point;
         console.log("-----------------Starting Proxy!-----------------")
         //await new Promise(resolve => setTimeout(resolve, 2000));
         await proxyConfig.runProxy(inventoryFile, endPoint);
 
     }
+
+    if(job_name=="F0_deploy"){
+    
+       // for(let i=0;i<dropletNames.length;i++){
+
+            let tempInventoryFile = inventoryFile["green"];
+            let vmCommands = buildYamlFile.jobs[index].vm_steps;
+
+            for(let i=0; i< vmCommands.length;i++){
+                let command = vmCommands[i].run;  
+                command = command.replaceAll('droplet_path', tempInventoryFile.name +"@"+tempInventoryFile.publicIP);
+                await configFile.sshIntoVM(`${command}`); 
+            }
+
+        let droplet_ssh = null;
+        droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+
+
+            
+            
+        let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
+        console.log(dropletStepsCommand)
+        
+        
+        
+        for(let i=0; i< dropletStepsCommand.length;i++){
+            let command = dropletStepsCommand[i].run;  
+            execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
+
+        // let monitorStepsCommand = buildYamlFile.jobs[index].monitor_steps;
+        //     console.log(monitorStepsCommand) 
+
+        //     for(let i=0; i< monitorStepsCommand.length;i++){
+        //         let command = monitorStepsCommand[i].run;  
+        //         execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        //     }
+        
+        
+       // let tempInventoryFile = inventoryFile[dropletNames[i]];
+       // let droplet_ssh = null;
+        //droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+
+        
+
+    //}
+}
+
+
+    if(job_name=="django_stats"){
+
+        let tempInventoryFile = inventoryFile["green"];
+
+        let droplet_ssh = null;
+        droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+
+        let monitorStepsCommand = buildYamlFile.jobs[index].monitor_steps;
+        console.log(monitorStepsCommand) 
+
+        for(let i=0; i< monitorStepsCommand.length;i++){
+            let command = monitorStepsCommand[i].run;  
+            execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
+
+    }
+
+    if(job_name=="react_stats"){
+
+        let tempInventoryFile = inventoryFile["blue"];
+
+        let droplet_ssh = null;
+        droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+
+        let monitorStepsCommand = buildYamlFile.jobs[index].monitor_steps;
+        console.log(monitorStepsCommand) 
+
+        for(let i=0; i< monitorStepsCommand.length;i++){
+            let command = monitorStepsCommand[i].run;  
+            execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+        }
+
+    }
+
+    if(job_name=="vehicle-deploy"){
+
+       // for(let i=0;i<dropletNames.length;i++){
+
+            let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
+            console.log(dropletStepsCommand)
+            
+            let tempInventoryFile = inventoryFile["blue"];
+            let droplet_ssh = null;
+            droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+        
+            let vmCommands = buildYamlFile.jobs[index].vm_steps;
+
+            for(let i=0; i< vmCommands.length;i++){
+                let command = vmCommands[i].run;  
+                command = command.replaceAll('droplet_path', tempInventoryFile.name +"@"+tempInventoryFile.publicIP);
+                await configFile.sshIntoVM(`${command}`); 
+            }
+
+            for(let i=0; i< dropletStepsCommand.length;i++){
+                let command = dropletStepsCommand[i].run;  
+                execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+            }
+       // }
+
+    }
+
+    if(job_name=="monitor-deploy"){
+
+      //  for(let i=0;i<dropletNames.length;i++){
+            
+        let vmCommands = buildYamlFile.jobs[index].vm_steps;
+        console.log(vmCommands);
+        let tempInventoryFile = inventoryFile["monitor"];
+        for(let i=0; i< vmCommands.length;i++){
+            let command = vmCommands[i].run;  
+            command = command.replaceAll('droplet_path', tempInventoryFile.name +"@"+tempInventoryFile.publicIP);
+            await configFile.sshIntoVM(`${command}`); 
+        }
+
+            let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
+            console.log(dropletStepsCommand)
+            
+            //let tempInventoryFile = inventoryFile["monitor"];
+            let droplet_ssh = null;
+            droplet_ssh = `ssh -i "web-srv" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${tempInventoryFile.name}@${tempInventoryFile.publicIP}`;
+    
+            for(let i=0; i< dropletStepsCommand.length;i++){
+                let command = dropletStepsCommand[i].run;  
+                command = command.replaceAll('droplet_path', tempInventoryFile.name +"@"+tempInventoryFile.publicIP);
+                execSync(`${droplet_ssh} "${command}"`, {stdio: ['inherit', 'inherit', 'inherit']}); 
+            }
+        //}
+
+    }
+
 };

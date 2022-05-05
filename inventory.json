@@ -1,4 +1,5 @@
 {
-"green":{"name":"root","dropletId":"298146233","publicIP":"134.122.21.114"},
-"blue":{"name":"root","dropletId":"298146235","publicIP":"161.35.55.49"}
+"green":{"name":"root","dropletId":"298433208","publicIP":"137.184.59.224"},
+"blue":{"name":"root","dropletId":"298433211","publicIP":"159.223.107.171"},
+"monitor":{"name":"root","dropletId":"298433217","publicIP":"159.89.226.146"}
 }

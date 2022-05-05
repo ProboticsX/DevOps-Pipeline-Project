@@ -62,6 +62,18 @@ exports.handler = async argv => {
             await mutationBuild.runMutation(buildYamlFile, index);
         
         }
+
+        if(job_name=="F0_build"){
+
+            let runSteps = buildYamlFile.jobs[index].steps;
+            await configFile.runSteps(runSteps);
+        }
+
+        if(job_name=="vehicle-build"){
+
+            let runSteps = buildYamlFile.jobs[index].steps;
+            await configFile.runSteps(runSteps);
+        }
     } 
     catch (e) 
     {

@@ -15,16 +15,20 @@ exports.builder = yargs => {
 };
 
 exports.handler = async argv => {
-    var dropletName1 = "droplet-green";
+    var dropletName1 = "jshah7-green";
 	var region = "nyc1"; // Fill one in from #1
 	var imageName = "ubuntu-20-04-x64"; // Fill one in from #2
-    var dropletName2 = "droplet-blue";
+    var dropletName2 = "jshah7-blue";
+    var dropletName3 = "monitor";
+
+    //var thirddroplet = "monitor";
 
     let sshFingerprint = await sshGeneration.generateSSH();
 
     var info1 = await provisionBuild.createDroplet(dropletName1, region, imageName, sshFingerprint);
     var info2 = await provisionBuild.createDroplet(dropletName2, region, imageName, sshFingerprint);    
-    var result = '{\n"green":'+info1 + ',\n"blue":' + info2+'\n}';
+    var info3 = await provisionBuild.createDroplet(dropletName3, region, imageName, sshFingerprint);
+    var result = '{\n"green":'+info1 + ',\n"blue":' + info2+',\n"monitor":' + info3+'\n}';
  
     fs.writeFileSync("inventory.json", result, 'utf8', function (err) {     
 	    if (err) {
