@@ -77,9 +77,7 @@ exports.handler = async argv => {
 
     
     inventoryFile = JSON.parse(inventoryFile);
-
-    console.log(index);
-
+    
     if(index == 4){
 
         let vmCommands = buildYamlFile.jobs[index].vm_steps;
