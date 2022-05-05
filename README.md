@@ -51,6 +51,25 @@ pipeline analysis pet-analysis build.yml
 **ANALYSIS:**
 
   - codeacy
+  
+  With a single command you can:
+
+  Get static code analysis issues, complexity, duplication and other code metrics
+  Run a tool or the whole suite of supported tools by Codacy
+  Use the tools' default patterns, your configuration files or your settings saved on Codacy
+  
+  The metrics data is printed for each file and contains 5 types of data:
+
+  LOC - Lines of Code
+  CLOC - Commented Lines of Code
+  CC - Cyclomatic Complexity
+  #methods - Number of methods
+  #classes - Number of classes
+  
+  The command used was:
+  ```
+  sudo codacy-analysis-cli analyze --tool metrics --directory ~/angular-demo-travelapp/
+  ```
 
 ![image](https://media.github.ncsu.edu/user/22719/files/7ca3af4e-3cc7-4ff2-9c94-0a46684953ea)
 
@@ -65,6 +84,12 @@ sudo apt-get install cloc
 ![image](https://media.github.ncsu.edu/user/22719/files/ea738c81-3bdd-468b-a795-dea45a1d904d)
 
   - PMD
+
+The tool utlisized mainly for analysing the ```java``` applications. The command used was:
+
+```
+./run.sh pmd -d ~/spring-petclinic/src/main/java/org/springframework/samples/petclinic/ -f text -R rulesets/java/quickstart.xml
+```
  
 ![image](https://media.github.ncsu.edu/user/22719/files/4b801532-b04d-49ee-aa5f-894ea8cfe252)
 
