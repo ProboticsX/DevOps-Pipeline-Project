@@ -100,7 +100,7 @@ The tool utlisized mainly for analysing the ```java``` applications. The command
   - The major problem I faced in this was that this tool required the installation of ```docker``` that I didn't know earlier.
   - Hence, I resolved the error by installing ```docker``` on the ```deploy-vm``` using the commands given in the [blog](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
    
-### Screencast
+### Screencast for Project 1
 
 Link: https://youtu.be/y6c-LGoUSbc
 
@@ -139,28 +139,35 @@ pipeline test angular-test build.yml
 pipeline analysis angular-analysis build.yml
 ```
 
-BUILD:
+**BUILD**:
 
 ![Screenshot 2022-05-04 220312](https://media.github.ncsu.edu/user/22719/files/c19baeb6-2040-40a3-8282-695a81be9e60)
 
 
-TEST:
+**TEST**:
 
 ![Screenshot 2022-05-04 220523](https://media.github.ncsu.edu/user/22719/files/0cad8304-6a38-437a-b54c-883bb3a6e9a5)
 
 
-DEPLOY:
+**DEPLOY**:
 
 ![Screenshot 2022-05-04 220436](https://media.github.ncsu.edu/user/22719/files/3720bdf0-4f42-40a1-a515-b917a0a790ba)
 
   
-ANALYSIS:
+**ANALYSIS**:
 
-- ESLint:
+- ESLint: 
+  
+  The tool used for analyzing and finding errors in the angular applications. The command used here was:
+  ```
+  ng lint
+  ```
 
 ![Screenshot 2022-05-04 220642](https://media.github.ncsu.edu/user/22719/files/82e5875f-bcce-4d88-83a3-695cd7da930a)
 
 - Esprima:
+
+The requirement mainly used for ```javascript``` projects. I was able to find the number of import packages and strings in the application.
 
 ![Screenshot 2022-05-04 220722](https://media.github.ncsu.edu/user/22719/files/34b0d148-6332-4653-8bb6-7a0fc694cea6)
 
@@ -174,19 +181,24 @@ sudo apt-get install cloc
 
 ![Screenshot 2022-05-04 220759](https://media.github.ncsu.edu/user/22719/files/090f0f76-c77e-48f7-9ec6-46286dc91ad2)
 
-- Codeacy:
+- codacy:
+
+Similar to as explained above
 
 ![Screenshot 2022-05-04 221035](https://media.github.ncsu.edu/user/22719/files/4b9c321c-85e8-4c9d-a709-97054dc33c63)
 
 
   
+### Challenges faced 😎
    
-### Screencast
+   The major challenge I faced was finding the appropriate analyzing tool for angular projects. Although, ```EsLint``` and ```Esprima``` are good tools but their outcome was not enough to meet the requirements of the analysis. Hence, I was able to solve this challenge by using ```codacy``` tool that created the whole metrics for the application and it was language independent.
+   
+### Screencast for Projcet 2
 
 Link: https://youtu.be/LdOikAhylHA
 
 
-### Links:
+### Important Links & References:
 
 Project1 Link: https://github.com/spring-projects/spring-petclinic
 
@@ -194,6 +206,9 @@ Project2 Link: https://github.com/nivmprasad/angular-demo-travelapp
 
 Codelacy: https://github.com/codacy/codacy-analysis-cli
 
+ESLint: https://github.com/angular-eslint/angular-eslint#readme
+
+PMD: https://github.com/pmd/pmd
 
 ***Note***: Make sure that ```.env``` file is in the below format:
 ```
