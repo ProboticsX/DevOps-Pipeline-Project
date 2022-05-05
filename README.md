@@ -1,4 +1,4 @@
-# README.md (Deployment)
+# README.md (F0)
 
 ### What progress we have made ✅
 This section aims to explain about the current progress that we have successfully completed after continuing from the M2.md
@@ -71,7 +71,5 @@ Link: https://youtu.be/U3rms5h79nM
 <table>
   <tr>
     <td align="center"><a href="https://github.ncsu.edu/jshah7"><img src="https://avatars.github.ncsu.edu/u/24819?s=400&u=280e70d782addeea586714773e95b8766e098f95"width="75px;" alt=""/ ><br /><sub><b>Jay Shah</b></sub></a></td>
-    <td align="center"><a href="https://github.ncsu.edu/nkotche"><img src="https://avatars.github.ncsu.edu/u/22460" width="75px;" alt=""/><br /><sub><b>Neha Kotcherlakota</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.ncsu.edu/sshubha"><img src="https://avatars.github.ncsu.edu/u/22719" width="75px;" alt=""/><br /><sub><b>Shubham Shubham</b></sub></a><br /></td>
   </tr>
 </table>
