@@ -148,7 +148,6 @@ Running the pipeline for the app:
 
 <img width="1434" alt="Screenshot 2022-05-04 at 10 25 10 PM" src="https://media.github.ncsu.edu/user/22460/files/a4c46202-83c1-4eb1-9c12-25af493dc27d">
 
-  
 
 5. Run `pipeline prod up`
 - Running this will trigger all the commands that are required to run in order to create two droplets: nkotche-blue and nkotche-green
@@ -179,6 +178,8 @@ Java project - https://youtu.be/S9c7Yaw3PgU
 Angular Project
 - https://youtu.be/Fnkj-dCEAh8
 - https://youtu.be/Gtk1_mxpM8o
+
+Audio link - https://drive.google.com/drive/folders/1ulGJk9QQB9-yZJkSK2HU8ESf9CcbAmWV?usp=sharing
 
 
 
