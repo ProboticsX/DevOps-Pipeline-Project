@@ -109,16 +109,31 @@ pipeline analysis angular-analysis build.yml
 ```
 
 BUILD:
-SsssssssssssssssS
+
+![Screenshot 2022-05-04 220312](https://media.github.ncsu.edu/user/22719/files/c19baeb6-2040-40a3-8282-695a81be9e60)
+
 
 TEST:
-SsssssssssssssssS
+
+![Screenshot 2022-05-04 220523](https://media.github.ncsu.edu/user/22719/files/0cad8304-6a38-437a-b54c-883bb3a6e9a5)
+
 
 DEPLOY:
-SsssssssssssssssS
+
+![Screenshot 2022-05-04 220436](https://media.github.ncsu.edu/user/22719/files/3720bdf0-4f42-40a1-a515-b917a0a790ba)
+
   
 ANALYSIS:
-SsssssssssssssssS
+
+![Screenshot 2022-05-04 220642](https://media.github.ncsu.edu/user/22719/files/82e5875f-bcce-4d88-83a3-695cd7da930a)
+
+![Screenshot 2022-05-04 220722](https://media.github.ncsu.edu/user/22719/files/34b0d148-6332-4653-8bb6-7a0fc694cea6)
+
+![Screenshot 2022-05-04 220759](https://media.github.ncsu.edu/user/22719/files/090f0f76-c77e-48f7-9ec6-46286dc91ad2)
+
+![Screenshot 2022-05-04 221035](https://media.github.ncsu.edu/user/22719/files/4b9c321c-85e8-4c9d-a709-97054dc33c63)
+
+
   
    
 ### Screencast
