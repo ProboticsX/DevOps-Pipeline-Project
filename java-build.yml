@@ -11,23 +11,16 @@ Variable:
   - DEBIAN_FRONTEND="noninteractive"
 
 jobs:
-  - name: itrust-build
+  - name: java-build
     clone:
-      - name: remove iTrust if it already exists
-        run: rm -rf iTrust2-v10
-      - name: clone itrust
-        run: git clone https://token@github.ncsu.edu/engr-csc326-staff/iTrust2-v10.git
-    sql_setup:
-      - name: Setup SQL
-        run: echo \"mysql-server mysql-server/root_password password passwd\" | sudo debconf-set-selections
-      - name: SQL 
-        run: echo \"mysql-server mysql-server/root_password_again password passwd\" | sudo debconf-set-selections
-      - name: create application.yml file
-        run: cp iTrust2-v10/iTrust2/src/main/resources/application.yml.template iTrust2-v10/iTrust2/src/main/resources/application.yml 
-      - name: set password in application.yml
-        run: sed -i 's/password\:/password\:\ passwd/g' iTrust2-v10/iTrust2/src/main/resources/application.yml
-      - name: install mysql
-        run: sudo apt-get install -y mysql-server   
+      - name: remove springbootwebapp if it already exists
+        run: rm -rf springbootwebapp
+      - name: clone springbootwebapp
+        run: git clone https://github.com/springframeworkguru/springbootwebapp.git   
+      - name: copy
+        run: cp /bakerx/patch/springboot.patch ~/springbootwebapp/
+      - name: Attach patch
+        run: cd springbootwebapp && git apply springboot.patch
     steps: 
       - name: Install Maven
         run: sudo apt-get install maven -y
@@ -37,8 +30,6 @@ jobs:
         run: sudo apt-get install default-jre -y
       - name: install JDK
         run: sudo apt-get install openjdk-11-jdk -y     
-      - name: test iTrust1
-        run: cd iTrust2-v10/iTrust2 && mvn --batch-mode --update-snapshots clean test
 
   - name: mutation-coverage
     iterations: 2
@@ -87,10 +78,34 @@ jobs:
       - name: store mutation screenshots in the folders created 
         run: mkdir mutation && cd mutation && mkdir upload && mkdir long && mkdir survey && mkdir variations
 
-  - name: itrust-deploy
-    deployment_file_path: iTrust2-v10/iTrust2/target/iTrust2-10.jar
-    application_name: iTrust2
-    end_point: iTrust2/login
+  - name: test
+    steps:
+      - name: test springbootwebapp
+        run: cd springbootwebapp && mvn clean test
+
+  - name: code-coverage
+    threshold: 0.1
+    steps:
+      - name: modify pom.xml
+        run: sed -i 's/requiredCoverage/threshold/' ~/springbootwebapp/pom.xml
+      - name: copy file to local
+        run: cd springbootwebapp && mvn clean verify | tee ~/coverage-java.txt
+      - name: copy bash file
+        run: sed -i 's/<minimum>threshold/<minimum>requiredCoverage/' ~/springbootwebapp/pom.xml
+      - name: copy file to local
+        run: cp coverage-java.txt /bakerx/
+      - name: copy bash file
+        run: cp /bakerx/java_cov.sh ~
+      - name: get coverage
+        run: bash java_cov.sh threshold
+      - name: Get test results
+        run: cp java-code-coverage.json /bakerx/
+
+  - name: java-deploy
+    application_type: java
+    deployment_file_path: springbootwebapp/target/spring-boot-web-0.0.1-SNAPSHOT.jar
+    application_name: springbootwebapp
+    end_point: springbootwebapp/login
     execute_permission:
       - name: permit web-srv
         run: chmod 600 web-srv
@@ -100,21 +115,12 @@ jobs:
       - name: permit web-srv in VM
         run: chmod 600 .ssh/web-srv
       - name: package application
-        run: cd iTrust2-v10/iTrust2/ && mvn package
+        run: cd springbootwebapp && mvn package
       - name: install seige
         run: sudo apt install siege -y
-    vm_to_droplet_steps:
+    vm_to_droplet:
       - name: copy files to droplet
         run: scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q -i ".ssh/web-srv " ~/project_path droplet_name@ip_address:~ 
-    sql_setup:
-      - name: configure mysql password
-        run: echo "mysql-server mysql-server/root_password password passwd" | sudo debconf-set-selections
-      - name: configure mysql password
-        run: echo "mysql-server mysql-server/root_password_again password passwd" | sudo debconf-set-selections
-      - name: install mysql-server
-        run: sudo apt-get install -y mysql-server
-      - name: start mysql
-        run: sudo systemctl start mysql
     droplet_steps:
       - name: Update command
         run: sudo apt-get update
@@ -125,7 +131,7 @@ jobs:
       - name: install Maven
         run: sudo apt install maven -y ; export PATH=/opt/apache-maven-3.6.3/bin:$PATH 
       - name: execute jar file
-        run: java -jar iTrust2-10.jar > output.txt 2>&1 &
+        run: java -jar spring-boot-web-0.0.1-SNAPSHOT.jar > output.txt 2>&1 &
     proxy_steps:
       - name: Run the proxy server
         run: pipeline serve

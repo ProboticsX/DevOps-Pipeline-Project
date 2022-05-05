@@ -23,13 +23,13 @@ exports.handler = async argv => {
     let pull_img = `bakerx pull focal cloud-images.ubuntu.com`;                   // Pull the focal image
     child_process.execSync(pull_img, {stdio: ['inherit', 'inherit', 'inherit']});       
 
-    let createVM = `bakerx run deploy-vm focal --ip 192.168.56.10 --sync --memory 4096`;  // Create VM
+    let createVM = `bakerx run f0-nkotche-vm focal --ip 192.168.56.10 --sync --memory 4096`;  // Create VM
     child_process.execSync(createVM, {stdio: ['inherit', 'inherit', 'inherit']});       
 	
-	let print_get_info = `bakerx ssh-info deploy-vm --format json`;    // Display connection information of VM
+	let print_get_info = `bakerx ssh-info f0-nkotche-vm --format json`;    // Display connection information of VM
     child_process.execSync(print_get_info, {stdio: ['inherit', 'inherit', 'inherit']});    
 	    
-    let get_info = `bakerx ssh-info deploy-vm --format json > "VM_Info.json"`;    // Store connection information of VM in JSON file
+    let get_info = `bakerx ssh-info f0-nkotche-vm --format json > "VM_Info.json"`;    // Store connection information of VM in JSON file
     child_process.execSync(get_info, {stdio: ['inherit', 'inherit', 'inherit']});      
     
    

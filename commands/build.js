@@ -41,20 +41,17 @@ exports.handler = async argv => {
             return;
         }
 
-        if(job_name=="itrust-build") {
+
+        if(index == 0) {
 
             let cloneCommands = buildYamlFile.jobs[index].clone;  
             await configFile.runCloneSteps(cloneCommands);
-
-            let sqlSetupSteps = buildYamlFile.jobs[index].sql_setup;   
-            await configFile.runSQLSetupSteps(sqlSetupSteps);
-
             let runSteps = buildYamlFile.jobs[index].steps;   
             await configFile.runSteps(runSteps);
         
         }
 
-        if(job_name=="mutation-coverage") {
+        if(index == 1) {
 
             await mutationBuild.cloneMutationRepositories(buildYamlFile,index);
             await mutationBuild.createFinalJSON(buildYamlFile,index);

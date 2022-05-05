@@ -15,10 +15,10 @@ exports.builder = yargs => {
 };
 
 exports.handler = async argv => {
-    var dropletName1 = "droplet-green";
+    var dropletName1 = "nkotche-green";
 	var region = "nyc1"; // Fill one in from #1
 	var imageName = "ubuntu-20-04-x64"; // Fill one in from #2
-    var dropletName2 = "droplet-blue";
+    var dropletName2 = "nkotche-blue";
 
     let sshFingerprint = await sshGeneration.generateSSH();
 
