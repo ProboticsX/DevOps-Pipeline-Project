@@ -1,37 +1,63 @@
 # README.md (F0)
 
-### What progress we have made ✅
-This section aims to explain about the current progress that we have successfully completed after continuing from the M2.md
+### What progress I have made ✅
+This section aims to explain about the current progress that we have successfully completed after continuing from the M3.md
 
-- The provisioning and configuring of computing environment for ```pipeline``` was done successfully.
-- Creation of ```.jar``` file for iTrut deployment is done successfully.
-- Creation of blue and green droplets using the ``` pipeline prod up``` is done successfully.
-- ```inventory.json``` file to save the dropet information is created successfully.
-- Triggering of build job ```pipeline deploy inventory itrust-deploy build.yml``` is done successfully.
-- Deployment of iTrust using the blue-green stratergy is done successfully.
+- The new feature has been successfully deployed on top of the orginal pipeline.
+- Two different open source project has been used
+  - One - Django Web App
+  - Two - React App
+- The django project has been deployed on green server, where as the react app has been deployed on the blue server.
+- The new feature of** Monitoring** has been implemented on top of the current pipeline.
+- The monitor droplet is used to for the Monitoring pipeline.
 
 The commands used for running the project are as follows:
 
 ``` 
 pipeline init
 pipeline build itrust-build build.yml
+pipeline build F0_build build.yml
+pipeline test F0_test build.yml
 pipeline prod up
-pipeline deploy inventory itrust-deploy build.yml
+pipeline deploy inventory F0_deploy build.yml
+pipeline deploy inventory monitor-deploy build.yml
+pipeline deploy inventory django_stats build.yml
+pipeline build vehicle-build build.yml
+pipeline test vehicle-test build.yml
+pipeline deploy inventory vehicle-deploy build.yml
+pipeline deploy inventory react_stats build.yml
+
 ```
-Blue-Green droplets created
 
-<img width="577" alt="image" src="https://media.github.ncsu.edu/user/24819/files/14f05545-1867-4f7d-9b2e-f7a767199494">
-
-iTrust running on Green Server
-
-<img width="565" alt="image" src="https://media.github.ncsu.edu/user/24819/files/1d39b8ab-8e84-493f-ac97-8b51df164354">
-
-iTrust running on Blue Server
-
-<img width="563" alt="image" src="https://media.github.ncsu.edu/user/24819/files/14e837a7-9e14-4aaf-8782-b6e5b3d9c1c5">
+- The F0 is the django webapp
+- The vehicle is the react app
+- Seperate jobs for building and testing are used
 
 
+Creation of all three droplets
 
+<img width="759" alt="droplets" src="https://media.github.ncsu.edu/user/24819/files/bef84937-fa47-44f7-a535-60926deb4a09">
+
+Running the Django App on green droplet
+
+<img width="943" alt="F0" src="https://media.github.ncsu.edu/user/24819/files/a82748dd-308b-4508-a372-9d4989011a6d">
+
+Running the React App on blue droplet
+
+<img width="943" alt="React" src="https://media.github.ncsu.edu/user/24819/files/2ddf271f-8c7a-4bd0-ba74-eaa43cfb8079">
+
+The monitoring dashboard deployed on monitor droplet
+
+<img width="947" alt="monitor" src="https://media.github.ncsu.edu/user/24819/files/fbf664ec-078e-464e-8723-8399d015e99c">
+
+
+The statistics used for monitoring are
+
+- CPU %
+- Memory %
+- Latency (ms)
+- HTTP response
+- Trend
 
 ***Note***: Make sure that ```.env``` file is in the below format:
 ```
@@ -39,29 +65,7 @@ Git_Token = <ENTER GITHUB TOKEN>
 mySQL_passwd = <ENTER MYSQL PASSWORD>
 DO_TOKEN = <ENTER DROPLET TOKEN>
 ```
-### What challenges we had and what we learned from them 😎
 
-- Error in installing the dependencies in droplet via a vm 
-  - We initially tried to install the necessary dependdencies for iTrust in a droplet via a vm. However, multiple times there were connection time out error, or connection refused errors, we evene tried to use await and a promise.
-  - Hence, we resolved the error by installing the dependencies in the droplet from the host machine, instead of double ssh into droplet.
-  
-- Exporting the iTrust project in a ```.jar``` or ```.war```
-  - The challenge faced here was that the ```.war``` file was created, but the issues arises with the new version of iTrust, and setting the correct path of Tomcat.
-  - As a result, we chose to use the ```.jar``` file to deploy iTrust.
-
-- Creation of proxy server for blue-green deployment
-  - The issue faced here was that we were creating the proxy server, however there were issues with ip masking, for blue-green deployment.
-  - Hence, this was solved by properly using the proxy server and resolving the errors in it, so as to properly mask the ips.
-
-
-### Team Contributions 👥	
-
-
-### Project board 🗒️
-
-<img width="1434" alt="Screenshot 2022-05-02 at 11 10 18 PM" src="https://media.github.ncsu.edu/user/22460/files/77bbf262-73d1-45c1-ac4c-b9a3f4993ff6">
-
-   
 ### Screencast
 
 Link: https://youtu.be/U3rms5h79nM
