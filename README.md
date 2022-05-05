@@ -134,7 +134,12 @@ Running the pipeline for the app:
 - After the application is successfully deployed, hit the api: `{{http://ip_address_of_nkotche_green_droplet}}/` and `{{http://ip_address_of_nkotche_blue_droplet}}/` in order to see the application running.
 
 
-The commands used for running the Java Project are as follows:
+***Note***: Make sure that ```.env``` file is in the below format:
+```
+Git_Token = <ENTER GITHUB TOKEN>
+mySQL_passwd = <ENTER MYSQL PASSWORD>
+DO_TOKEN = <ENTER DROPLET TOKEN>
+```
 
 
 
