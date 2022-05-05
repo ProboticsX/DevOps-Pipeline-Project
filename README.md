@@ -96,7 +96,7 @@ The tool utlisized mainly for analysing the ```java``` applications. The command
 
 ### Challenges faced 😎
 
-- Error in setting up the dependencies for ```codelacy```.
+- Error in setting up the dependencies for ```codeacy```.
   - The major problem I faced in this was that this tool required the installation of ```docker``` that I didn't know earlier.
   - Hence, I resolved the error by installing ```docker``` on the ```deploy-vm``` using the commands given in the [blog](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
    
