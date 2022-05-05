@@ -173,6 +173,12 @@ Git_Token = <ENTER GITHUB TOKEN>
 mySQL_passwd = <ENTER MYSQL PASSWORD>
 DO_TOKEN = <ENTER DROPLET TOKEN>
 ```
+### Screencast
+
+Java project - https://youtu.be/S9c7Yaw3PgU
+Angular Project
+- https://youtu.be/Fnkj-dCEAh8
+- https://youtu.be/Gtk1_mxpM8o
 
 
 
