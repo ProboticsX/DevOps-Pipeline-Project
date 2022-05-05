@@ -34,18 +34,33 @@ pipeline test pet-test build.yml
 pipeline analysis pet-analysis build.yml
 ```
 
-BUILD:
-SsssssssssssssssS
+**BUILD**:
 
-TEST:
-SsssssssssssssssS
+![image](https://media.github.ncsu.edu/user/22719/files/aaf19475-1522-46c1-83aa-1ab631341004)
 
-DEPLOY:
-SsssssssssssssssS
+**TEST**:
+
+![image](https://media.github.ncsu.edu/user/22719/files/4cfc3fec-f789-41d5-b9c9-e3578e957bf4)
+
+
+**DEPLOY**:
+
+![image](https://media.github.ncsu.edu/user/22719/files/d02711ab-91d7-407b-8105-42c28b2e1e3b)
+
   
-ANALYSIS:
-SsssssssssssssssS
-  
+**ANALYSIS:**
+
+  - codelacy
+
+![image](https://media.github.ncsu.edu/user/22719/files/7ca3af4e-3cc7-4ff2-9c94-0a46684953ea)
+
+  - cloc
+
+![image](https://media.github.ncsu.edu/user/22719/files/ea738c81-3bdd-468b-a795-dea45a1d904d)
+
+  - PMD
+ 
+![image](https://media.github.ncsu.edu/user/22719/files/4b801532-b04d-49ee-aa5f-894ea8cfe252)
 
 
 ### Challenges faced 😎
