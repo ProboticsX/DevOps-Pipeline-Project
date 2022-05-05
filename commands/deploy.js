@@ -157,7 +157,7 @@ exports.handler = async argv => {
 
         for(let i=0;i<dropletNames.length;i++){
             let dropletStepsCommand = buildYamlFile.jobs[index].droplet_steps;
-            let tempInventoryFile = inventoryFile[dropletNames[0]];
+            let tempInventoryFile = inventoryFile[dropletNames[i]];
 
 
             let droplet_ssh = null;

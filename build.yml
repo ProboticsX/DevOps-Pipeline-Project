@@ -165,6 +165,27 @@ jobs:
 
   - name: pet-analysis
     steps:
+      - name: remove folder
+        run: rm -rf codacy-analysis-cli
+      - name: clone
+        run: git clone https://github.com/codacy/codacy-analysis-cli.git
+      - name: update command
+        run: sudo apt update
+      - name: install docker
+        run: sudo apt install apt-transport-https ca-certificates curl software-properties-common
+      - name: install docker
+        run: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      - name: install docker
+        run: sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable'
+      - name: install docker
+        run: apt-cache policy docker-ce
+      - name: install docker
+        run: sudo apt install docker-ce
+      - name: install docker
+        run: sudo systemctl status docker
+      - name: install codacy
+        run: cd codacy-analysis-cli && sudo make install
+      
       - name: Install cloc 
         run: cd spring-petclinic &&  sudo npm i -g cloc
       - name: Run cloc 
@@ -179,6 +200,8 @@ jobs:
         run: sudo apt-get install unzip
       - name: Unzip the .zip file
         run: unzip pmd-bin-6.45.0.zip
+      - name: Run codacy analysis
+        run: cd codacy-analysis-cli && sudo codacy-analysis-cli analyze --tool metrics --directory ~/spring-petclinic/
       - name: Run pmd for analysis
         run: cd pmd-bin-6.45.0/bin/ && ./run.sh pmd -d ~/spring-petclinic/src/main/java/org/springframework/samples/petclinic/ -f text -R rulesets/java/quickstart.xml
 
@@ -245,6 +268,29 @@ jobs:
 
   - name: angular-analysis
     steps:
+      - name: remove folder
+        run: rm -rf codacy-analysis-cli
+      - name: clone
+        run: git clone https://github.com/codacy/codacy-analysis-cli.git
+      - name: update command
+        run: sudo apt update
+      - name: install docker
+        run: sudo apt install apt-transport-https ca-certificates curl software-properties-common
+      - name: install docker
+        run: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      - name: install docker
+        run: sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable'
+      - name: install docker
+        run: apt-cache policy docker-ce
+      - name: install docker
+        run: sudo apt install docker-ce
+      - name: install docker
+        run: sudo systemctl status docker
+      - name: install codacy
+        run: cd codacy-analysis-cli && sudo make install
+      - name: Run codacy analysis
+        run: cd codacy-analysis-cli && sudo codacy-analysis-cli analyze --tool metrics --directory ~/angular-demo-travelapp/
+        
       - name: Install cloc 
         run: cd angular-demo-travelapp &&  sudo npm i -g cloc
       - name: Run cloc 
