@@ -50,11 +50,17 @@ pipeline analysis pet-analysis build.yml
   
 **ANALYSIS:**
 
-  - codelacy
+  - codeacy
 
 ![image](https://media.github.ncsu.edu/user/22719/files/7ca3af4e-3cc7-4ff2-9c94-0a46684953ea)
 
   - cloc
+
+The ```cloc``` tool helped me in analysing all the different files that were present in the project. Moreover, it was language independent.
+The commands used for installing ```cloc``` was: 
+```
+sudo apt-get install cloc
+```
 
 ![image](https://media.github.ncsu.edu/user/22719/files/ea738c81-3bdd-468b-a795-dea45a1d904d)
 
@@ -71,7 +77,7 @@ pipeline analysis pet-analysis build.yml
    
 ### Screencast
 
-Link: https://www.youtube.com/watch?v=9W2khgoUpmc
+Link: https://youtu.be/y6c-LGoUSbc
 
 
 # Project 2 - Angular-Demo-Travel App
@@ -125,11 +131,25 @@ DEPLOY:
   
 ANALYSIS:
 
+- ESLint:
+
 ![Screenshot 2022-05-04 220642](https://media.github.ncsu.edu/user/22719/files/82e5875f-bcce-4d88-83a3-695cd7da930a)
+
+- Esprima:
 
 ![Screenshot 2022-05-04 220722](https://media.github.ncsu.edu/user/22719/files/34b0d148-6332-4653-8bb6-7a0fc694cea6)
 
+- cloc
+
+The ```cloc``` tool helped me in analysing all the different files that were present in the project. Moreover, it was language independent.
+The commands used for installing ```cloc``` was: 
+```
+sudo apt-get install cloc
+```
+
 ![Screenshot 2022-05-04 220759](https://media.github.ncsu.edu/user/22719/files/090f0f76-c77e-48f7-9ec6-46286dc91ad2)
+
+- Codeacy:
 
 ![Screenshot 2022-05-04 221035](https://media.github.ncsu.edu/user/22719/files/4b9c321c-85e8-4c9d-a709-97054dc33c63)
 
@@ -138,7 +158,7 @@ ANALYSIS:
    
 ### Screencast
 
-Link: https://www.youtube.com/watch?v=9W2khgoUpmc
+Link: https://youtu.be/LdOikAhylHA
 
 
 ### Links:
