@@ -81,6 +81,59 @@ Running the pipeline for the app:
 - After the application is successfully deployed, hit the api: `{{http://ip_address_of_nkotche_green_droplet}}/` and `{{http://ip_address_of_nkotche_blue_droplet}}/` in order to see the application running.
 
 
+## Project 2: Java Spring Boot Application : springbootwebapp
+
+About the application:
+
+Simple Angular 8 WebApp implements CRUD on two models: companies and categories and list companies filtered by categoryId on the home view.
+Backend implemented using Express-REST 
+
+The commands used for running the Angular Project are as follows:
+
+``` 
+pipeline init
+pipeline build angular-build angular-build.yml
+pipeline test angular-build.yml
+pipeline code-coverage angular-build.yml
+pipeline prod up
+pipeline deploy inventory angular-deploy angular-build.yml
+```
+
+Running the pipeline for the app:
+
+1. Run `pipeline init`
+- Running this will trigger the commands that initialise a virtual machine by the name: f0-nkotche-vm which is required to run the Java Spring Boot Application.
+
+2. Run `pipeline build java-build java-build.yml`
+- The build command requires 2 parameters: 
+1. <job-name\> : java-build
+2. <yaml-file\> : angular-build.yml
+- Running this will trigger the commands that are required to run in order to setup the virtual machines with all the dependencies required to run the application
+- It then creates a build for the application
+  
+3. Run `pipeline test java-build.yml`
+- The build command requires 1 parameter: 
+1. <yaml-file\> - java-build.yml
+- Running this will trigger all the commands that are required to run in order to test the application
+
+4. Run `pipeline code-coverage java-build.yml`
+- The build command requires 1 parameter: 
+1. <yaml-file\> - java-build.yml
+- "Note": Prior to executing this command, add a miniumum threshold value for the code coverage below which the user should not be allowed to deploy the application, in the threshold field of the 'code-coverage' job in the java-build.yml file 
+- Running this will trigger all the commands that are required to run in order to compute the code coverage of the application
+  
+5. Run `pipeline prod up`
+- Running this will trigger all the commands that are required to run in order to create two droplets: nkotche-blue and nkotche-green
+
+6. Run `pipeline deploy inventory java-deploy java-build.yml`
+- The build command requires 2 parameters: 
+1. <job-name\> : java-build
+2. <yaml-file\> : java-build.yml
+- Running this will trigger all the commands that are required to run in order to deploy the application on the droplets: nkotche-blue and nkotche-green
+
+- After the application is successfully deployed, hit the api: `{{http://ip_address_of_nkotche_green_droplet}}/` and `{{http://ip_address_of_nkotche_blue_droplet}}/` in order to see the application running.
+
+
 The commands used for running the Java Project are as follows:
 
 ``` 
@@ -91,3 +144,5 @@ pipeline code-coverage java-build.yml
 pipeline prod up
 pipeline deploy inventory java-deploy java-build.yml
 ```
+
+
