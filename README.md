@@ -64,7 +64,7 @@ DO_TOKEN = <ENTER DROPLET TOKEN>
    
 ### Screencast
 
-Link: https://www.youtube.com/watch?v=9W2khgoUpmc
+Link: https://youtu.be/U3rms5h79nM
 
 ## Contributors
 
