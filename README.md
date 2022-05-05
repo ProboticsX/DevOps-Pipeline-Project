@@ -88,15 +88,15 @@ About the application:
 Simple Angular 8 WebApp implements CRUD on two models: companies and categories and list companies filtered by categoryId on the home view.
 Backend implemented using Express-REST 
 
-The commands used for running the Angular Project are as follows:
+The commands used for running the Java Spring Boot Project are as follows:
 
 ``` 
 pipeline init
-pipeline build angular-build angular-build.yml
-pipeline test angular-build.yml
-pipeline code-coverage angular-build.yml
+pipeline build java-build java-build.yml
+pipeline test java-build.yml
+pipeline code-coverage java-build.yml
 pipeline prod up
-pipeline deploy inventory angular-deploy angular-build.yml
+pipeline deploy inventory java-deploy java-build.yml
 ```
 
 Running the pipeline for the app:
@@ -136,13 +136,6 @@ Running the pipeline for the app:
 
 The commands used for running the Java Project are as follows:
 
-``` 
-pipeline init
-pipeline build java-build java-build.yml
-pipeline test java-build.yml
-pipeline code-coverage java-build.yml
-pipeline prod up
-pipeline deploy inventory java-deploy java-build.yml
-```
+
 
 
